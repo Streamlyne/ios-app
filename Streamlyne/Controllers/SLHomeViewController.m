@@ -27,6 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIColor *slBlue = [UIColor colorWithRed:(99/255.0) green:(189/255.0) blue:(211/255.0) alpha:1.0];
+    
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        self.navigationController.navigationBar.barTintColor = slBlue;
+        self.navigationController.navigationBar.translucent = NO;
+    }else {
+        self.navigationController.navigationBar.tintColor = slBlue;
+    }
 }
 
 - (void)didReceiveMemoryWarning

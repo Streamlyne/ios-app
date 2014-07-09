@@ -29,6 +29,9 @@
     
     [self setupRevealController];
     
+    // Make Status Bar text white
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     DDLogInfo(@"Finished setting up RevealController");
     
     return YES;
@@ -166,14 +169,17 @@
     SLHomeViewController *frontViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"homeViewController"];
     
     UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-    UIViewController *rightViewController = [[UIViewController alloc] init];
-    rightViewController.view.backgroundColor = [UIColor redColor];
+
+    UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
+
+    
     
     // Step 2: Instantiate.
     self.revealController = [PKRevealController revealControllerWithFrontViewController:frontNavigationController
-                                                                     leftViewController:[self leftViewController]
+                                                                     leftViewController:leftViewController
                                                                     rightViewController:[self rightViewController]];
     // Step 3: Configure.
+    [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
     self.revealController.delegate = self;
     self.revealController.animationDuration = 0.25;
     
@@ -193,27 +199,12 @@
 
 #pragma mark - Helpers
 
-- (UIViewController *)leftViewController
-{
-    UIViewController *leftViewController = [[UIViewController alloc] init];
-    leftViewController.view.backgroundColor = [UIColor yellowColor];
-    
-    UIButton *presentationModeButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0, 60.0, 180.0, 30.0)];
-    [presentationModeButton setTitle:@"Presentation Mode" forState:UIControlStateNormal];
-    [presentationModeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [presentationModeButton addTarget:self.revealController
-                               action:@selector(startPresentationMode)
-                     forControlEvents:UIControlEventTouchUpInside];
-    
-    [leftViewController.view addSubview:presentationModeButton];
-    
-    return leftViewController;
-}
 
 - (UIViewController *)rightViewController
 {
     UIViewController *rightViewController = [[UIViewController alloc] init];
-    rightViewController.view.backgroundColor = [UIColor redColor];
+    rightViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"oil_gas_plant.jpg"]];
+
     
     UIButton *presentationModeButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds])-200.0, 60.0, 180.0, 30.0)];
     presentationModeButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
