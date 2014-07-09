@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PKRevealController.h"
 
-@interface SLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SLAppDelegate : UIResponder <UIApplicationDelegate, PKRevealing>
+
+#pragma mark - Properties
+@property (nonatomic, strong, readwrite) PKRevealController *revealController;
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,6 +7,11 @@
 //
 
 #import "SLAppDelegate.h"
+// CocoaLumberJack
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+// ViewControllers
+#import "SLHomeViewController.h"
 
 @implementation SLAppDelegate
 
@@ -16,10 +21,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
+    // Configure CocoaLumberjack
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    DDLogInfo(@"Initializing");
+    
+    [self setupRevealController];
+    
+    DDLogInfo(@"Finished setting up RevealController");
+    
     return YES;
 }
 
@@ -59,7 +70,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
              // Replace this implementation with code to handle the error appropriately.
              // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            DDLogInfo(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         } 
     }
@@ -131,7 +142,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        DDLogInfo(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }    
     
@@ -144,6 +155,89 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+
+#pragma mark - PKRevealing
+
+-(PKRevealController *) setupRevealController {
+    
+    // Step 1: Create your controllers.
+    SLHomeViewController *frontViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"homeViewController"];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UIViewController *rightViewController = [[UIViewController alloc] init];
+    rightViewController.view.backgroundColor = [UIColor redColor];
+    
+    // Step 2: Instantiate.
+    self.revealController = [PKRevealController revealControllerWithFrontViewController:frontNavigationController
+                                                                     leftViewController:[self leftViewController]
+                                                                    rightViewController:[self rightViewController]];
+    // Step 3: Configure.
+    self.revealController.delegate = self;
+    self.revealController.animationDuration = 0.25;
+    
+    return self.revealController;
+}
+
+- (void)revealController:(PKRevealController *)revealController didChangeToState:(PKRevealControllerState)state
+{
+    DDLogInfo(@"%@ (%d)", NSStringFromSelector(_cmd), (int)state);
+}
+
+- (void)revealController:(PKRevealController *)revealController willChangeToState:(PKRevealControllerState)next
+{
+    PKRevealControllerState current = revealController.state;
+    DDLogInfo(@"%@ (%d -> %d)", NSStringFromSelector(_cmd), (int)current, (int)next);
+}
+
+#pragma mark - Helpers
+
+- (UIViewController *)leftViewController
+{
+    UIViewController *leftViewController = [[UIViewController alloc] init];
+    leftViewController.view.backgroundColor = [UIColor yellowColor];
+    
+    UIButton *presentationModeButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0, 60.0, 180.0, 30.0)];
+    [presentationModeButton setTitle:@"Presentation Mode" forState:UIControlStateNormal];
+    [presentationModeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [presentationModeButton addTarget:self.revealController
+                               action:@selector(startPresentationMode)
+                     forControlEvents:UIControlEventTouchUpInside];
+    
+    [leftViewController.view addSubview:presentationModeButton];
+    
+    return leftViewController;
+}
+
+- (UIViewController *)rightViewController
+{
+    UIViewController *rightViewController = [[UIViewController alloc] init];
+    rightViewController.view.backgroundColor = [UIColor redColor];
+    
+    UIButton *presentationModeButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds])-200.0, 60.0, 180.0, 30.0)];
+    presentationModeButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+    [presentationModeButton setTitle:@"Presentation Mode" forState:UIControlStateNormal];
+    [presentationModeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [presentationModeButton addTarget:self.revealController
+                               action:@selector(startPresentationMode)
+                     forControlEvents:UIControlEventTouchUpInside];
+    
+    [rightViewController.view addSubview:presentationModeButton];
+    
+    return rightViewController;
+}
+
+- (void)startPresentationMode
+{
+    if (![self.revealController isPresentationModeActive])
+    {
+        [self.revealController enterPresentationModeAnimated:YES completion:nil];
+    }
+    else
+    {
+        [self.revealController resignPresentationModeEntirely:NO animated:YES completion:nil];
+    }
 }
 
 @end

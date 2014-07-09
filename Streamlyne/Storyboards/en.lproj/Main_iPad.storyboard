@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Eqb-Hm-93U">
             <objects>
-                <viewController id="JR7-An-Jel" sceneMemberID="viewController">
+                <viewController id="JR7-An-Jel" customClass="SLLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pbe-mH-bBd"/>
                         <viewControllerLayoutGuide type="bottom" id="WjS-h6-UmG"/>
@@ -40,6 +40,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="JR7-An-Jel" eventType="touchUpInside" id="Xkg-0o-shn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-60-zYP">
                                 <rect key="frame" x="320" y="964" width="129" height="30"/>
@@ -104,8 +107,89 @@
             </objects>
             <point key="canvasLocation" x="243" y="-38"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="hpb-Nj-rii">
+            <objects>
+                <viewController storyboardIdentifier="homeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lqw-yd-oLn" customClass="SLHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9U9-aN-uWW"/>
+                        <viewControllerLayoutGuide type="bottom" id="U3F-Bi-t2f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YvZ-0Y-Dr8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mini.png" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-pl-d0w">
+                                <rect key="frame" x="283" y="365" width="203" height="135"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="N0q-nS-Ofg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xE-HT-BeT">
+                                <rect key="frame" x="174" y="518" width="234" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="5K3-xr-WLR"/>
+                                    <constraint firstAttribute="width" constant="234" id="AKE-To-CeM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.38431376218795776" green="0.73725491762161255" blue="0.82352948188781738" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glavin!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-xZ-swr">
+                                <rect key="frame" x="416" y="518" width="179" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="QVN-Is-s09"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.38431376220000002" green="0.73725491759999995" blue="0.82352948189999997" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYY-X8-uUf">
+                                <rect key="frame" x="290" y="819" width="218" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38823533058166504" green="0.74117648601531982" blue="0.82745105028152466" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="IWp-sC-Bz1"/>
+                                    <constraint firstAttribute="width" constant="218" id="m3Z-Q0-0Z4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Get Started!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5xE-HT-BeT" firstAttribute="top" secondItem="F5P-pl-d0w" secondAttribute="bottom" constant="18" id="4qY-AE-ami"/>
+                            <constraint firstItem="GYY-X8-uUf" firstAttribute="leading" secondItem="YvZ-0Y-Dr8" secondAttribute="leading" constant="290" id="Dxl-Sm-CMV"/>
+                            <constraint firstItem="ebm-xZ-swr" firstAttribute="leading" secondItem="5xE-HT-BeT" secondAttribute="trailing" constant="8" id="LAi-Ps-jki"/>
+                            <constraint firstItem="5xE-HT-BeT" firstAttribute="leading" secondItem="YvZ-0Y-Dr8" secondAttribute="leading" constant="174" id="OeW-GG-BIT"/>
+                            <constraint firstItem="5xE-HT-BeT" firstAttribute="baseline" secondItem="ebm-xZ-swr" secondAttribute="baseline" id="PRx-pm-OmK"/>
+                            <constraint firstItem="U3F-Bi-t2f" firstAttribute="top" secondItem="GYY-X8-uUf" secondAttribute="bottom" constant="128" id="ZeV-62-r4X"/>
+                            <constraint firstItem="F5P-pl-d0w" firstAttribute="top" secondItem="9U9-aN-uWW" secondAttribute="bottom" constant="301" id="gcq-Rz-TWi"/>
+                            <constraint firstItem="5xE-HT-BeT" firstAttribute="top" secondItem="ebm-xZ-swr" secondAttribute="top" id="oMa-vC-sib"/>
+                            <constraint firstItem="F5P-pl-d0w" firstAttribute="centerX" secondItem="YvZ-0Y-Dr8" secondAttribute="centerX" id="vNu-2E-roL"/>
+                            <constraint firstItem="U3F-Bi-t2f" firstAttribute="top" secondItem="5xE-HT-BeT" secondAttribute="bottom" constant="434" id="zlQ-i1-kEO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="p1Q-np-EdW">
+                        <barButtonItem key="leftBarButtonItem" image="glyphicons_halflings_054_align-justify.png" id="5Gf-Fd-jYL"/>
+                        <barButtonItem key="rightBarButtonItem" image="glyphicons_halflings_055_list.png" id="Rbe-dn-lVY"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ky-4G-0wK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="-38"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="glyphicons_halflings_054_align-justify.png" width="12" height="11"/>
+        <image name="glyphicons_halflings_055_list.png" width="12" height="11"/>
         <image name="logo_mini.png" width="430" height="434"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
