@@ -1368,6 +1368,11 @@
 		77A50118196D9169000BADC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FC196D9169000BADC0 /* CoreData.framework */; };
 		77A50120196D9169000BADC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A5011E196D9169000BADC0 /* InfoPlist.strings */; };
 		77A50122196D9169000BADC0 /* StreamlyneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A50121196D9169000BADC0 /* StreamlyneTests.m */; };
+		77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */; };
+		77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */; };
+		77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */; };
+		77D708EB19706D1B00616266 /* Assets_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EA19706D1B00616266 /* Assets_iPad.storyboard */; };
+		77D708ED1970832A00616266 /* Metrics_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EC1970832A00616266 /* Metrics_iPad.storyboard */; };
 		80FDBC1A8ABD4EB59C216B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D6CE134AE0437A89021D6B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -2750,6 +2755,11 @@
 		77A5011D196D9169000BADC0 /* StreamlyneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreamlyneTests-Info.plist"; sourceTree = "<group>"; };
 		77A5011F196D9169000BADC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A50121196D9169000BADC0 /* StreamlyneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamlyneTests.m; sourceTree = "<group>"; };
+		77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred.png; sourceTree = "<group>"; };
+		77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened.png; sourceTree = "<group>"; };
+		77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened_cropped.png; sourceTree = "<group>"; };
+		77D708EA19706D1B00616266 /* Assets_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assets_iPad.storyboard; sourceTree = "<group>"; };
+		77D708EC1970832A00616266 /* Metrics_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metrics_iPad.storyboard; sourceTree = "<group>"; };
 		E622A477CFFF4CAC81544F77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -4146,6 +4156,9 @@
 		77615BF6196DBA3E00F8317E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */,
+				77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */,
+				77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */,
 				773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */,
 				772B5428196DD60A00050B7E /* Glyphicons */,
 				77615BF4196DBA3000F8317E /* logo_mini.png */,
@@ -4157,6 +4170,8 @@
 			isa = PBXGroup;
 			children = (
 				77615BFC196DBDF600F8317E /* Main_iPad.storyboard */,
+				77D708EA19706D1B00616266 /* Assets_iPad.storyboard */,
+				77D708EC1970832A00616266 /* Metrics_iPad.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -4406,6 +4421,7 @@
 				772B4C42196DD0A100050B7E /* glyphicons_halflings_129_hand-down@2x.png in Resources */,
 				772B50E7196DD5EE00050B7E /* glyphicons_053_alarm@2x.png in Resources */,
 				772B4BC6196DD0A100050B7E /* glyphicons_halflings_067_move@2x.png in Resources */,
+				77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */,
 				772B50D6196DD5EE00050B7E /* glyphicons_045_calendar.png in Resources */,
 				772B5422196DD5EE00050B7E /* glyphicons_467_server_flag.png in Resources */,
 				772B5251196DD5EE00050B7E /* glyphicons_234_brush@2x.png in Resources */,
@@ -4608,6 +4624,7 @@
 				772B53BF196DD5EE00050B7E /* glyphicons_417_disk_remove@2x.png in Resources */,
 				772B52C7196DD5EE00050B7E /* glyphicons_293_french_press@2x.png in Resources */,
 				772B51E2196DD5EE00050B7E /* glyphicons_179_eject.png in Resources */,
+				77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */,
 				772B5284196DD5EE00050B7E /* glyphicons_260_pool.png in Resources */,
 				772B51E9196DD5EE00050B7E /* glyphicons_182_mute@2x.png in Resources */,
 				772B53A3196DD5EE00050B7E /* glyphicons_403_sorting@2x.png in Resources */,
@@ -5119,6 +5136,7 @@
 				772B5399196DD5EE00050B7E /* glyphicons_398_copyright_mark@2x.png in Resources */,
 				772B5257196DD5EE00050B7E /* glyphicons_237_zoom_out@2x.png in Resources */,
 				772B4CC8196DD0A100050B7E /* glyphicons_halflings_196_cloud_download@2x.png in Resources */,
+				77D708ED1970832A00616266 /* Metrics_iPad.storyboard in Resources */,
 				772B5270196DD5EE00050B7E /* glyphicons_250_snorkel_diving.png in Resources */,
 				772B4C9D196DD0A100050B7E /* glyphicons_halflings_175_floppy_open.png in Resources */,
 				772B51CB196DD5EE00050B7E /* glyphicons_167_ipod_shuffle@2x.png in Resources */,
@@ -5580,6 +5598,7 @@
 				772B4C77196DD0A100050B7E /* glyphicons_halflings_156_unchecked.png in Resources */,
 				772B5414196DD5EE00050B7E /* glyphicons_460_blacksmith.png in Resources */,
 				772B4CC4196DD0A100050B7E /* glyphicons_halflings_194_registration_mark@2x.png in Resources */,
+				77D708EB19706D1B00616266 /* Assets_iPad.storyboard in Resources */,
 				772B4C0E196DD0A100050B7E /* glyphicons_halflings_103_fire@2x.png in Resources */,
 				772B4B4C196DD0A100050B7E /* glyphicons_halflings_006_star-empty@2x.png in Resources */,
 				772B5224196DD5EE00050B7E /* glyphicons_212_down_arrow.png in Resources */,
@@ -5645,6 +5664,7 @@
 				772B5320196DD5EE00050B7E /* glyphicons_338_turtle.png in Resources */,
 				772B519E196DD5EE00050B7E /* glyphicons_145_folder_plus.png in Resources */,
 				772B4BE1196DD0A100050B7E /* glyphicons_halflings_081_minus-sign.png in Resources */,
+				77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */,
 				772B4CCE196DD0A100050B7E /* glyphicons_halflings_199_tree_deciduous@2x.png in Resources */,
 				772B53EF196DD5EE00050B7E /* glyphicons_441_phone_alt@2x.png in Resources */,
 				772B5204196DD5EE00050B7E /* glyphicons_196_circle_exclamation_mark.png in Resources */,

@@ -31,7 +31,7 @@
     
     // Make Status Bar text white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
+    
     DDLogInfo(@"Finished setting up RevealController");
     
     return YES;
@@ -45,7 +45,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -71,11 +71,11 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             DDLogInfo(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
 
@@ -125,7 +125,7 @@
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -147,7 +147,7 @@
          */
         DDLogInfo(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return _persistentStoreCoordinator;
 }
@@ -168,20 +168,24 @@
     // Step 1: Create your controllers.
     SLHomeViewController *frontViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"homeViewController"];
     
+    // Setup root navigation controller
     UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-
-    UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
-
     
+    // glyphicons_halflings_055_list.png
+    
+    UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
     
     // Step 2: Instantiate.
     self.revealController = [PKRevealController revealControllerWithFrontViewController:frontNavigationController
                                                                      leftViewController:leftViewController
-                                                                    rightViewController:[self rightViewController]];
+                             //                                       rightViewController:[self rightViewController]
+                             ];
     // Step 3: Configure.
     [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
     self.revealController.delegate = self;
     self.revealController.animationDuration = 0.25;
+    
+    [self switchRevealFrontViewControllerTo:frontViewController show:YES];
     
     return self.revealController;
 }
@@ -199,12 +203,49 @@
 
 #pragma mark - Helpers
 
+- (void) switchRevealFrontViewControllerTo:(UIViewController *) newFrontViewController show:(Boolean)shouldShow {
+    
+    // Switch front view controllers
+    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    UINavigationController *frontNavigationController = (UINavigationController *) d.revealController.frontViewController;
+    [frontNavigationController setViewControllers:@[newFrontViewController] animated:YES];
+    
+    // add left bar button item for activity menu
+    UIImage* activityMenuImage = [UIImage imageNamed:@"glyphicons_halflings_054_align-justify.png"];
+    // Make image a template image
+    activityMenuImage = [activityMenuImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    //
+    CGRect frameimg = CGRectMake(0, 0, activityMenuImage.size.width, activityMenuImage.size.height);
+    UIButton *activityMenuBtn = [[UIButton alloc] initWithFrame:frameimg];
+    [activityMenuBtn setTintColor:[UIColor whiteColor]];
+    [activityMenuBtn setBackgroundImage:activityMenuImage forState:UIControlStateNormal];
+    [activityMenuBtn addTarget:self action:@selector(showActivityMenu)
+              forControlEvents:UIControlEventTouchUpInside];
+    [activityMenuBtn setShowsTouchWhenHighlighted:YES];
+    UIBarButtonItem *activityMenuBarBtn =[[UIBarButtonItem alloc] initWithCustomView:activityMenuBtn];
+    frontNavigationController.topViewController.navigationItem.leftBarButtonItem = activityMenuBarBtn;
+    
+    if (shouldShow) {
+        // Show front view controller
+        [self.revealController showViewController:newFrontViewController];
+    }
+    
+}
+
+- (void) showActivityMenu {
+    [self.revealController showViewController:self.revealController.leftViewController];
+}
+
+
+- (void) showActivityFeed {
+    [self.revealController showViewController:self.revealController.rightViewController];
+}
 
 - (UIViewController *)rightViewController
 {
     UIViewController *rightViewController = [[UIViewController alloc] init];
     rightViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"oil_gas_plant.jpg"]];
-
+    
     
     UIButton *presentationModeButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds])-200.0, 60.0, 180.0, 30.0)];
     presentationModeButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;

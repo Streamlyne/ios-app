@@ -23,4 +23,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void) switchRevealFrontViewControllerTo:(UIViewController *) newFrontViewController show:(Boolean)shouldShow;
+- (void) showActivityMenu;
+- (void) showActivityFeed;
+
 @end
