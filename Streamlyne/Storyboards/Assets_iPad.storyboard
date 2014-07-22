@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Assets-->
         <scene sceneID="ZZk-wV-0Eu">
             <objects>
-                <viewController storyboardIdentifier="assetsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zg8-SF-fBG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="assetsViewController" title="Assets" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zg8-SF-fBG" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QHe-Zx-L1H"/>
                         <viewControllerLayoutGuide type="bottom" id="M15-Ua-M2o"/>

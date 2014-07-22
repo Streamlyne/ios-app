@@ -1354,6 +1354,7 @@
 		77615BF5196DBA3000F8317E /* logo_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 77615BF4196DBA3000F8317E /* logo_mini.png */; };
 		77615BFA196DBDF600F8317E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77615BFC196DBDF600F8317E /* Main_iPad.storyboard */; };
 		77754CCC197EA763005772F4 /* Streamlyne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */; };
+		77754CCF197EC9D7005772F4 /* SLMetricsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77754CCE197EC9D7005772F4 /* SLMetricsListViewController.m */; };
 		77A500F7196D9169000BADC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F6196D9169000BADC0 /* Foundation.framework */; };
 		77A500F9196D9169000BADC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F8196D9169000BADC0 /* CoreGraphics.framework */; };
 		77A500FB196D9169000BADC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FA196D9169000BADC0 /* UIKit.framework */; };
@@ -2737,6 +2738,8 @@
 		773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oil_gas_plant.jpg; sourceTree = "<group>"; };
 		77615BF4196DBA3000F8317E /* logo_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_mini.png; sourceTree = "<group>"; };
 		77615BFB196DBDF600F8317E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		77754CCD197EC9D7005772F4 /* SLMetricsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMetricsListViewController.h; sourceTree = "<group>"; };
+		77754CCE197EC9D7005772F4 /* SLMetricsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMetricsListViewController.m; sourceTree = "<group>"; };
 		77A500F3196D9169000BADC0 /* Streamlyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streamlyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A500F6196D9169000BADC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77A500F8196D9169000BADC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -4185,6 +4188,8 @@
 				772B49AC196DCF2000050B7E /* SLHomeViewController.m */,
 				773B7B92196DE06000E559DD /* SLActivityMenuViewController.h */,
 				773B7B93196DE06000E559DD /* SLActivityMenuViewController.m */,
+				77754CCD197EC9D7005772F4 /* SLMetricsListViewController.h */,
+				77754CCE197EC9D7005772F4 /* SLMetricsListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -5750,6 +5755,7 @@
 				772B49AA196DC64000050B7E /* SLLoginViewController.m in Sources */,
 				77A50109196D9169000BADC0 /* SLAppDelegate.m in Sources */,
 				773B7B94196DE06000E559DD /* SLActivityMenuViewController.m in Sources */,
+				77754CCF197EC9D7005772F4 /* SLMetricsListViewController.m in Sources */,
 				772B49AD196DCF2000050B7E /* SLHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
