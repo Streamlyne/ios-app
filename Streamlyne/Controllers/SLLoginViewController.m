@@ -8,6 +8,7 @@
 
 #import "SLLoginViewController.h"
 #import "SLAppDelegate.h"
+#import "StreamlyneSDK.h"
 
 @interface SLLoginViewController ()
 - (IBAction)loginBtnPressed:(UIButton *)sender;
@@ -50,12 +51,31 @@
 
 - (IBAction)loginBtnPressed:(UIButton *)sender {
     
-    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    // Validate login
+    // TODO: Use Application Settings from Settings.app
+    NSString *host = @"localhost:5000";
+    SLClient *client = [SLClient connectWithHost:host];
     
-    // Step 4: Apply.
-    d.window.rootViewController = d.revealController;
-    [d.window makeKeyAndVisible];
+    [client authenticateWithUserEmail:@"test@streamlyne.co"
+                              withPassword:@"password"
+                          withOrganization:@"test"]
+    .then(^(SLClient *client, SLUser *me) {
     
+        SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+        
+        // Step 4: Apply.
+        d.window.rootViewController = d.revealController;
+        [d.window makeKeyAndVisible];
+        
+    }).catch(^(NSError *error) {
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                           message:error.description
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+    });
+
 }
 
 @end

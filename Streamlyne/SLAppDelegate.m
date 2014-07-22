@@ -12,6 +12,7 @@
 #import "DDTTYLogger.h"
 // ViewControllers
 #import "SLHomeViewController.h"
+#import "StreamlyneSDK.h"
 
 @implementation SLAppDelegate
 
@@ -31,6 +32,14 @@
     
     // Make Status Bar text white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // Magical Record
+    [MagicalRecord setDefaultModelFromClass:[self class]];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Streamlyne"];
+    
+    NSLog(@"default context: %@", [NSManagedObjectContext MR_defaultContext]);
+    NSLog(@"inManagedObjectContext: %@", [NSManagedObjectContext MR_defaultContext].persistentStoreCoordinator.managedObjectModel.entities);
+    NSLog(@"inManagedObjectContext: %@", self.managedObjectContext.persistentStoreCoordinator.managedObjectModel.entities);
     
     DDLogInfo(@"Finished setting up RevealController");
     
