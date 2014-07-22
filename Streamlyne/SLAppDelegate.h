@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PKRevealController.h"
+#import "StreamlyneSDK.h"
 
 @interface SLAppDelegate : UIResponder <UIApplicationDelegate, PKRevealing>
 
@@ -15,14 +16,11 @@
 @property (nonatomic, strong, readwrite) PKRevealController *revealController;
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SLClient *client;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+-(PKRevealController *) setupRevealController;
 - (void) switchRevealFrontViewControllerTo:(UIViewController *) newFrontViewController show:(Boolean)shouldShow;
 - (void) showActivityMenu;
 - (void) showActivityFeed;

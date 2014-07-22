@@ -1353,6 +1353,7 @@
 		773B7B96196DE0C600E559DD /* oil_gas_plant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */; };
 		77615BF5196DBA3000F8317E /* logo_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 77615BF4196DBA3000F8317E /* logo_mini.png */; };
 		77615BFA196DBDF600F8317E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77615BFC196DBDF600F8317E /* Main_iPad.storyboard */; };
+		77754CCC197EA763005772F4 /* Streamlyne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */; };
 		77A500F7196D9169000BADC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F6196D9169000BADC0 /* Foundation.framework */; };
 		77A500F9196D9169000BADC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F8196D9169000BADC0 /* CoreGraphics.framework */; };
 		77A500FB196D9169000BADC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FA196D9169000BADC0 /* UIKit.framework */; };
@@ -1367,7 +1368,6 @@
 		77A50118196D9169000BADC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FC196D9169000BADC0 /* CoreData.framework */; };
 		77A50120196D9169000BADC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A5011E196D9169000BADC0 /* InfoPlist.strings */; };
 		77A50122196D9169000BADC0 /* StreamlyneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A50121196D9169000BADC0 /* StreamlyneTests.m */; };
-		77AB5D25197E223D0074D21C /* Streamlyne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */; };
 		77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */; };
 		77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */; };
 		77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */; };
@@ -5745,12 +5745,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77754CCC197EA763005772F4 /* Streamlyne.xcdatamodeld in Sources */,
 				77A50105196D9169000BADC0 /* main.m in Sources */,
 				772B49AA196DC64000050B7E /* SLLoginViewController.m in Sources */,
 				77A50109196D9169000BADC0 /* SLAppDelegate.m in Sources */,
 				773B7B94196DE06000E559DD /* SLActivityMenuViewController.m in Sources */,
 				772B49AD196DCF2000050B7E /* SLHomeViewController.m in Sources */,
-				77AB5D25197E223D0074D21C /* Streamlyne.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

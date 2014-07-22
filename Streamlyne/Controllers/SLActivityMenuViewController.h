@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SLActivityMenuViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *welcomeUserLabel;
 
 @end

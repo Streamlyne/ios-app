@@ -16,6 +16,8 @@
 
 @implementation SLActivityMenuViewController
 
+@synthesize welcomeUserLabel;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -62,6 +64,13 @@
     
     // Disable scroll when content fits on screen
     self.tableView.alwaysBounceVertical = NO;
+    
+    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    SLClient *client = d.client;
+    SLUser *meUser = client.me;
+    welcomeUserLabel.text = [NSString stringWithFormat:@"Welcome %@ %@", meUser.firstName, meUser.lastName];
+    NSLog(@"MeUser: %@", meUser);
+    
 }
 
 - (void)didReceiveMemoryWarning

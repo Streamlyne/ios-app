@@ -17,6 +17,8 @@
 
 @implementation SLLoginViewController
 
+@synthesize emailTextField, passwordTextField, organizationTextField;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -52,28 +54,35 @@
 - (IBAction)loginBtnPressed:(UIButton *)sender {
     
     // Validate login
-    // TODO: Use Application Settings from Settings.app
-    NSString *host = @"localhost:5000";
-    SLClient *client = [SLClient connectWithHost:host];
+    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    SLClient *client = d.client;
     
-    [client authenticateWithUserEmail:@"test@streamlyne.co"
-                              withPassword:@"password"
-                          withOrganization:@"test"]
+    // Get Login info
+    NSString *email = emailTextField.text;
+    NSString *password = passwordTextField.text;
+    NSString *organization = organizationTextField.text;
+    
+    [client authenticateWithUserEmail:email
+                              withPassword:password
+                          withOrganization:organization]
     .then(^(SLClient *client, SLUser *me) {
-    
-        SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+        
+        // Setup
+        [d setupRevealController];
         
         // Step 4: Apply.
         d.window.rootViewController = d.revealController;
         [d.window makeKeyAndVisible];
         
     }).catch(^(NSError *error) {
+        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                           message:error.description
+                                                           message:error.localizedDescription
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
         [theAlert show];
+        
     });
 
 }
