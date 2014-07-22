@@ -82,8 +82,8 @@
         
     }).catch(^(NSError *error) {
         
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                           message:error.localizedDescription
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                           message:error.localizedRecoverySuggestion
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
