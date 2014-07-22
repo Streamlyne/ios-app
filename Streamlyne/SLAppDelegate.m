@@ -25,19 +25,15 @@
     
     DDLogInfo(@"Initializing");
     
-//    [self setupRevealController];
-    
+    // Setup Defaults for Settings
+    [self registerDefaultsFromSettingsBundle];
+
     // Make Status Bar text white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Magical Record
     [MagicalRecord setDefaultModelFromClass:[self class]];
     [MagicalRecord setupAutoMigratingCoreDataStack];
-    
-    // Streamlyne API Client
-    // TODO: Use Application Settings from Settings.app
-    NSString *host = @"localhost:5000";
-    client = [SLClient connectWithHost:host];
     
     DDLogInfo(@"Finished setting up RevealController");
     
@@ -71,6 +67,29 @@
     // Saves changes in the application's managed object context before the application terminates.
     [MagicalRecord cleanUp];
 }
+
+#pragma mark - Settings
+- (void)registerDefaultsFromSettingsBundle {
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle) {
+        DDLogInfo(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key && [[prefSpecification allKeys] containsObject:@"DefaultValue"]) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+}
+
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.

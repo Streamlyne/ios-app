@@ -55,13 +55,19 @@
     
     // Validate login
     SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
-    SLClient *client = d.client;
+    
+    // Streamlyne API Client
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *host = [defaults stringForKey:@"apiHost"];
+    SLClient *client = [SLClient connectWithHost:host];
+    d.client = client;
     
     // Get Login info
     NSString *email = emailTextField.text;
     NSString *password = passwordTextField.text;
     NSString *organization = organizationTextField.text;
     
+    // Login with credentials
     [client authenticateWithUserEmail:email
                               withPassword:password
                           withOrganization:organization]

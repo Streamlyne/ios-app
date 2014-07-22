@@ -1353,8 +1353,24 @@
 		773B7B96196DE0C600E559DD /* oil_gas_plant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */; };
 		77615BF5196DBA3000F8317E /* logo_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 77615BF4196DBA3000F8317E /* logo_mini.png */; };
 		77615BFA196DBDF600F8317E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77615BFC196DBDF600F8317E /* Main_iPad.storyboard */; };
-		77754CCC197EA763005772F4 /* Streamlyne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */; };
 		77754CCF197EC9D7005772F4 /* SLMetricsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77754CCE197EC9D7005772F4 /* SLMetricsListViewController.m */; };
+		77754CD1197ED99B005772F4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD0197ED99B005772F4 /* Settings.bundle */; };
+		77754CE2197EDC7A005772F4 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD2197EDC79005772F4 /* Icon-40.png */; };
+		77754CE3197EDC7A005772F4 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD3197EDC79005772F4 /* Icon-40@2x.png */; };
+		77754CE4197EDC7A005772F4 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD4197EDC79005772F4 /* Icon-60.png */; };
+		77754CE5197EDC7A005772F4 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD5197EDC79005772F4 /* Icon-60@2x.png */; };
+		77754CE6197EDC7A005772F4 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD6197EDC79005772F4 /* Icon-72.png */; };
+		77754CE7197EDC7A005772F4 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD7197EDC79005772F4 /* Icon-72@2x.png */; };
+		77754CE8197EDC7A005772F4 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD8197EDC79005772F4 /* Icon-76.png */; };
+		77754CE9197EDC7A005772F4 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CD9197EDC79005772F4 /* Icon-76@2x.png */; };
+		77754CEA197EDC7A005772F4 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDA197EDC79005772F4 /* Icon-Small-50.png */; };
+		77754CEB197EDC7A005772F4 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDB197EDC79005772F4 /* Icon-Small-50@2x.png */; };
+		77754CEC197EDC7A005772F4 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDC197EDC79005772F4 /* Icon-Small.png */; };
+		77754CED197EDC7A005772F4 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDD197EDC79005772F4 /* Icon-Small@2x.png */; };
+		77754CEE197EDC7A005772F4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDE197EDC79005772F4 /* Icon.png */; };
+		77754CEF197EDC7A005772F4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CDF197EDC79005772F4 /* Icon@2x.png */; };
+		77754CF0197EDC7A005772F4 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CE0197EDC7A005772F4 /* iTunesArtwork.png */; };
+		77754CF1197EDC7A005772F4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CE1197EDC7A005772F4 /* iTunesArtwork@2x.png */; };
 		77A500F7196D9169000BADC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F6196D9169000BADC0 /* Foundation.framework */; };
 		77A500F9196D9169000BADC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F8196D9169000BADC0 /* CoreGraphics.framework */; };
 		77A500FB196D9169000BADC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FA196D9169000BADC0 /* UIKit.framework */; };
@@ -2740,6 +2756,23 @@
 		77615BFB196DBDF600F8317E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		77754CCD197EC9D7005772F4 /* SLMetricsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMetricsListViewController.h; sourceTree = "<group>"; };
 		77754CCE197EC9D7005772F4 /* SLMetricsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMetricsListViewController.m; sourceTree = "<group>"; };
+		77754CD0197ED99B005772F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Streamlyne/Settings.bundle; sourceTree = "<group>"; };
+		77754CD2197EDC79005772F4 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		77754CD3197EDC79005772F4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		77754CD4197EDC79005772F4 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		77754CD5197EDC79005772F4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		77754CD6197EDC79005772F4 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		77754CD7197EDC79005772F4 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		77754CD8197EDC79005772F4 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		77754CD9197EDC79005772F4 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		77754CDA197EDC79005772F4 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		77754CDB197EDC79005772F4 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		77754CDC197EDC79005772F4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		77754CDD197EDC79005772F4 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		77754CDE197EDC79005772F4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		77754CDF197EDC79005772F4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		77754CE0197EDC7A005772F4 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		77754CE1197EDC7A005772F4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		77A500F3196D9169000BADC0 /* Streamlyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streamlyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A500F6196D9169000BADC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77A500F8196D9169000BADC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -2757,7 +2790,6 @@
 		77A5011D196D9169000BADC0 /* StreamlyneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreamlyneTests-Info.plist"; sourceTree = "<group>"; };
 		77A5011F196D9169000BADC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A50121196D9169000BADC0 /* StreamlyneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamlyneTests.m; sourceTree = "<group>"; };
-		77AB5D24197E223D0074D21C /* Streamlyne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Streamlyne.xcdatamodel; sourceTree = "<group>"; };
 		77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred.png; sourceTree = "<group>"; };
 		77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened.png; sourceTree = "<group>"; };
 		77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened_cropped.png; sourceTree = "<group>"; };
@@ -4159,6 +4191,7 @@
 		77615BF6196DBA3E00F8317E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				77754CF2197EDC81005772F4 /* AppIcons */,
 				77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */,
 				77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */,
 				77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */,
@@ -4194,9 +4227,33 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		77754CF2197EDC81005772F4 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				77754CD2197EDC79005772F4 /* Icon-40.png */,
+				77754CD3197EDC79005772F4 /* Icon-40@2x.png */,
+				77754CD4197EDC79005772F4 /* Icon-60.png */,
+				77754CD5197EDC79005772F4 /* Icon-60@2x.png */,
+				77754CD6197EDC79005772F4 /* Icon-72.png */,
+				77754CD7197EDC79005772F4 /* Icon-72@2x.png */,
+				77754CD8197EDC79005772F4 /* Icon-76.png */,
+				77754CD9197EDC79005772F4 /* Icon-76@2x.png */,
+				77754CDA197EDC79005772F4 /* Icon-Small-50.png */,
+				77754CDB197EDC79005772F4 /* Icon-Small-50@2x.png */,
+				77754CDC197EDC79005772F4 /* Icon-Small.png */,
+				77754CDD197EDC79005772F4 /* Icon-Small@2x.png */,
+				77754CDE197EDC79005772F4 /* Icon.png */,
+				77754CDF197EDC79005772F4 /* Icon@2x.png */,
+				77754CE0197EDC7A005772F4 /* iTunesArtwork.png */,
+				77754CE1197EDC7A005772F4 /* iTunesArtwork@2x.png */,
+			);
+			name = AppIcons;
+			sourceTree = "<group>";
+		};
 		77A500EA196D9169000BADC0 = {
 			isa = PBXGroup;
 			children = (
+				77754CD0197ED99B005772F4 /* Settings.bundle */,
 				77A500FE196D9169000BADC0 /* Streamlyne */,
 				77A5011B196D9169000BADC0 /* StreamlyneTests */,
 				77A500F5196D9169000BADC0 /* Frameworks */,
@@ -4236,7 +4293,6 @@
 				77A50107196D9169000BADC0 /* SLAppDelegate.h */,
 				77A50108196D9169000BADC0 /* SLAppDelegate.m */,
 				77A5010D196D9169000BADC0 /* Images.xcassets */,
-				77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */,
 				77A500FF196D9169000BADC0 /* Supporting Files */,
 			);
 			path = Streamlyne;
@@ -4321,6 +4377,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Streamlyne Technologies";
 				TargetAttributes = {
+					77A500F2196D9169000BADC0 = {
+						DevelopmentTeam = W5FJAL22S9;
+					};
 					77A50112196D9169000BADC0 = {
 						TestTargetID = 77A500F2196D9169000BADC0;
 					};
@@ -4428,6 +4487,7 @@
 				772B4BC6196DD0A100050B7E /* glyphicons_halflings_067_move@2x.png in Resources */,
 				77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */,
 				772B50D6196DD5EE00050B7E /* glyphicons_045_calendar.png in Resources */,
+				77754CEF197EDC7A005772F4 /* Icon@2x.png in Resources */,
 				772B5422196DD5EE00050B7E /* glyphicons_467_server_flag.png in Resources */,
 				772B5251196DD5EE00050B7E /* glyphicons_234_brush@2x.png in Resources */,
 				772B5386196DD5EE00050B7E /* glyphicons_389_new_window_alt.png in Resources */,
@@ -4503,9 +4563,11 @@
 				772B52DC196DD5EE00050B7E /* glyphicons_304_temple_hindu.png in Resources */,
 				772B4C38196DD0A100050B7E /* glyphicons_halflings_124_thumbs-up@2x.png in Resources */,
 				772B51BB196DD5EE00050B7E /* glyphicons_159_playlist@2x.png in Resources */,
+				77754CE9197EDC7A005772F4 /* Icon-76@2x.png in Resources */,
 				772B4BED196DD0A100050B7E /* glyphicons_halflings_087_remove-circle.png in Resources */,
 				772B4CA3196DD0A100050B7E /* glyphicons_halflings_178_cutlery.png in Resources */,
 				772B4C32196DD0A100050B7E /* glyphicons_halflings_121_bullhorn@2x.png in Resources */,
+				77754CE8197EDC7A005772F4 /* Icon-76.png in Resources */,
 				772B51EA196DD5EE00050B7E /* glyphicons_183_volume_down.png in Resources */,
 				772B50C5196DD5EE00050B7E /* glyphicons_036_file@2x.png in Resources */,
 				772B5373196DD5EE00050B7E /* glyphicons_379_electrical_socket_us@2x.png in Resources */,
@@ -4560,6 +4622,7 @@
 				772B530C196DD5EE00050B7E /* glyphicons_328_podium.png in Resources */,
 				772B4BDB196DD0A100050B7E /* glyphicons_halflings_078_chevron-left.png in Resources */,
 				772B4B48196DD0A100050B7E /* glyphicons_halflings_004_heart@2x.png in Resources */,
+				77754CE5197EDC7A005772F4 /* Icon-60@2x.png in Resources */,
 				772B51CF196DD5EE00050B7E /* glyphicons_169_record@2x.png in Resources */,
 				772B531A196DD5EE00050B7E /* glyphicons_335_pushpin.png in Resources */,
 				772B532B196DD5EE00050B7E /* glyphicons_343_thumbs_up@2x.png in Resources */,
@@ -4678,6 +4741,7 @@
 				772B52FF196DD5EE00050B7E /* glyphicons_321_gamepad@2x.png in Resources */,
 				772B5096196DD5EE00050B7E /* glyphicons_013_beach_umbrella.png in Resources */,
 				772B539F196DD5EE00050B7E /* glyphicons_401_skateboard@2x.png in Resources */,
+				77754CE7197EDC7A005772F4 /* Icon-72@2x.png in Resources */,
 				772B5416196DD5EE00050B7E /* glyphicons_461_saw_blade.png in Resources */,
 				772B536F196DD5EE00050B7E /* glyphicons_377_riflescope@2x.png in Resources */,
 				772B4BA4196DD0A100050B7E /* glyphicons_halflings_050_text-width@2x.png in Resources */,
@@ -4689,6 +4753,7 @@
 				772B52D4196DD5EE00050B7E /* glyphicons_300_microphone.png in Resources */,
 				772B5280196DD5EE00050B7E /* glyphicons_258_qrcode.png in Resources */,
 				772B53AD196DD5EE00050B7E /* glyphicons_408_sort-by-attributes@2x.png in Resources */,
+				77754CE6197EDC7A005772F4 /* Icon-72.png in Resources */,
 				772B5282196DD5EE00050B7E /* glyphicons_259_barcode.png in Resources */,
 				772B50C8196DD5EE00050B7E /* glyphicons_038_airplane.png in Resources */,
 				772B53C0196DD5EE00050B7E /* glyphicons_418_disk_import.png in Resources */,
@@ -4727,6 +4792,7 @@
 				772B52A4196DD5EE00050B7E /* glyphicons_276_cutlery.png in Resources */,
 				772B51BF196DD5EE00050B7E /* glyphicons_161_macbook@2x.png in Resources */,
 				772B4C6F196DD0A100050B7E /* glyphicons_halflings_152_sort-by-order.png in Resources */,
+				77754CE3197EDC7A005772F4 /* Icon-40@2x.png in Resources */,
 				772B5395196DD5EE00050B7E /* glyphicons_396_sound_6_1@2x.png in Resources */,
 				772B53B9196DD5EE00050B7E /* glyphicons_414_disk_save@2x.png in Resources */,
 				772B4BEE196DD0A100050B7E /* glyphicons_halflings_087_remove-circle@2x.png in Resources */,
@@ -4773,6 +4839,7 @@
 				772B50AC196DD5EE00050B7E /* glyphicons_024_parents.png in Resources */,
 				772B52BA196DD5EE00050B7E /* glyphicons_287_leather.png in Resources */,
 				772B5421196DD5EE00050B7E /* glyphicons_466_server_ban@2x.png in Resources */,
+				77754CE2197EDC7A005772F4 /* Icon-40.png in Resources */,
 				772B52B2196DD5EE00050B7E /* glyphicons_283_t-shirt.png in Resources */,
 				772B534D196DD5EE00050B7E /* glyphicons_360_bug@2x.png in Resources */,
 				772B4CB9196DD0A100050B7E /* glyphicons_halflings_189_sound_dolby.png in Resources */,
@@ -4790,8 +4857,10 @@
 				772B51A2196DD5EE00050B7E /* glyphicons_147_folder_lock.png in Resources */,
 				772B4B89196DD0A100050B7E /* glyphicons_halflings_037_volume-up.png in Resources */,
 				772B4BA2196DD0A100050B7E /* glyphicons_halflings_049_text-height@2x.png in Resources */,
+				77754CEE197EDC7A005772F4 /* Icon.png in Resources */,
 				772B53AA196DD5EE00050B7E /* glyphicons_407_sort-by-order-alt.png in Resources */,
 				772B4C3D196DD0A100050B7E /* glyphicons_halflings_127_hand-left.png in Resources */,
+				77754CEB197EDC7A005772F4 /* Icon-Small-50@2x.png in Resources */,
 				772B538A196DD5EE00050B7E /* glyphicons_391_video_hd.png in Resources */,
 				772B5091196DD5EE00050B7E /* glyphicons_010_envelope@2x.png in Resources */,
 				772B53DA196DD5EE00050B7E /* glyphicons_431_shoe_steps.png in Resources */,
@@ -4847,7 +4916,9 @@
 				772B5220196DD5EE00050B7E /* glyphicons_210_left_arrow.png in Resources */,
 				772B5367196DD5EE00050B7E /* glyphicons_373_nails@2x.png in Resources */,
 				772B5306196DD5EE00050B7E /* glyphicons_325_wallet.png in Resources */,
+				77754CEC197EDC7A005772F4 /* Icon-Small.png in Resources */,
 				772B50B7196DD5EE00050B7E /* glyphicons_029_notes_2@2x.png in Resources */,
+				77754CF1197EDC7A005772F4 /* iTunesArtwork@2x.png in Resources */,
 				772B4C80196DD0A100050B7E /* glyphicons_halflings_160_log_in@2x.png in Resources */,
 				772B5288196DD5EE00050B7E /* glyphicons_262_spade.png in Resources */,
 				772B4B74196DD0A100050B7E /* glyphicons_halflings_026_upload@2x.png in Resources */,
@@ -4963,6 +5034,7 @@
 				772B52FA196DD5EE00050B7E /* glyphicons_319_sort.png in Resources */,
 				772B528E196DD5EE00050B7E /* glyphicons_265_electrical_plug.png in Resources */,
 				772B53F4196DD5EE00050B7E /* glyphicons_444_floppy_saved.png in Resources */,
+				77754CE4197EDC7A005772F4 /* Icon-60.png in Resources */,
 				772B4C6A196DD0A100050B7E /* glyphicons_halflings_149_sort@2x.png in Resources */,
 				772B5132196DD5EE00050B7E /* glyphicons_091_adjust.png in Resources */,
 				772B50DD196DD5EE00050B7E /* glyphicons_048_dislikes@2x.png in Resources */,
@@ -5027,6 +5099,7 @@
 				772B5358196DD5EE00050B7E /* glyphicons_366_security_camera.png in Resources */,
 				772B53B0196DD5EE00050B7E /* glyphicons_410_compressed.png in Resources */,
 				772B518A196DD5EE00050B7E /* glyphicons_135_inbox_out.png in Resources */,
+				77754CD1197ED99B005772F4 /* Settings.bundle in Resources */,
 				772B532F196DD5EE00050B7E /* glyphicons_345_hand_right@2x.png in Resources */,
 				772B4B73196DD0A100050B7E /* glyphicons_halflings_026_upload.png in Resources */,
 				772B5298196DD5EE00050B7E /* glyphicons_270_shield.png in Resources */,
@@ -5144,6 +5217,7 @@
 				77D708ED1970832A00616266 /* Metrics_iPad.storyboard in Resources */,
 				772B5270196DD5EE00050B7E /* glyphicons_250_snorkel_diving.png in Resources */,
 				772B4C9D196DD0A100050B7E /* glyphicons_halflings_175_floppy_open.png in Resources */,
+				77754CED197EDC7A005772F4 /* Icon-Small@2x.png in Resources */,
 				772B51CB196DD5EE00050B7E /* glyphicons_167_ipod_shuffle@2x.png in Resources */,
 				772B51D0196DD5EE00050B7E /* glyphicons_170_step_backward.png in Resources */,
 				772B5378196DD5EE00050B7E /* glyphicons_382_dress.png in Resources */,
@@ -5151,6 +5225,7 @@
 				772B4B92196DD0A100050B7E /* glyphicons_halflings_041_tags@2x.png in Resources */,
 				772B525F196DD5EE00050B7E /* glyphicons_241_flash@2x.png in Resources */,
 				772B4CBE196DD0A100050B7E /* glyphicons_halflings_191_sound_6_1@2x.png in Resources */,
+				77754CF0197EDC7A005772F4 /* iTunesArtwork.png in Resources */,
 				772B53C5196DD5EE00050B7E /* glyphicons_420_tower@2x.png in Resources */,
 				772B53FC196DD5EE00050B7E /* glyphicons_448_translate.png in Resources */,
 				772B4BE0196DD0A100050B7E /* glyphicons_halflings_080_plus-sign@2x.png in Resources */,
@@ -5337,6 +5412,7 @@
 				772B4BB0196DD0A100050B7E /* glyphicons_halflings_056_indent-left@2x.png in Resources */,
 				772B50B5196DD5EE00050B7E /* glyphicons_028_cars@2x.png in Resources */,
 				772B4BE9196DD0A100050B7E /* glyphicons_halflings_085_info-sign.png in Resources */,
+				77754CEA197EDC7A005772F4 /* Icon-Small-50.png in Resources */,
 				772B4C63196DD0A100050B7E /* glyphicons_halflings_146_euro.png in Resources */,
 				772B52B3196DD5EE00050B7E /* glyphicons_283_t-shirt@2x.png in Resources */,
 				772B5406196DD5EE00050B7E /* glyphicons_453_kiosk.png in Resources */,
@@ -5750,7 +5826,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77754CCC197EA763005772F4 /* Streamlyne.xcdatamodeld in Sources */,
 				77A50105196D9169000BADC0 /* main.m in Sources */,
 				772B49AA196DC64000050B7E /* SLLoginViewController.m in Sources */,
 				77A50109196D9169000BADC0 /* SLAppDelegate.m in Sources */,
@@ -5884,6 +5959,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streamlyne/Supporting Files/Streamlyne-Prefix.pch";
 				INFOPLIST_FILE = "Streamlyne/Supporting Files/Streamlyne-Info.plist";
@@ -5898,6 +5974,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Streamlyne/Supporting Files/Streamlyne-Prefix.pch";
 				INFOPLIST_FILE = "Streamlyne/Supporting Files/Streamlyne-Info.plist";
@@ -5977,19 +6054,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		77AB5D23197E223D0074D21C /* Streamlyne.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				77AB5D24197E223D0074D21C /* Streamlyne.xcdatamodel */,
-			);
-			currentVersion = 77AB5D24197E223D0074D21C /* Streamlyne.xcdatamodel */;
-			path = Streamlyne.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 77A500EB196D9169000BADC0 /* Project object */;
 }
