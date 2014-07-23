@@ -1,21 +1,18 @@
 //
-//  SLMetricsListViewController.m
+//  SLMetricsSheetViewController.m
 //  Streamlyne
 //
-//  Created by Glavin Wiechert on 2014-07-22.
+//  Created by Glavin Wiechert on 2014-07-23.
 //  Copyright (c) 2014 Streamlyne Technologies. All rights reserved.
 //
 
-#import "SLMetricsListViewController.h"
-#import "SLAttributeCollectionViewCell.h"
+#import "SLMetricsSheetViewController.h"
 
-@interface SLMetricsListViewController ()
+@interface SLMetricsSheetViewController ()
 
 @end
 
-@implementation SLMetricsListViewController
-
-@synthesize attributeCollections;
+@implementation SLMetricsSheetViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,56 +27,17 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"MetricsList viewDidLoad");
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    // Initialize Refresh Control
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    // Configure Refresh Control
-    [refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
-    // Configure View Controller
-    [self setRefreshControl:refreshControl];
-    
-    // Init
-    self.attributeCollections = [NSArray array];
-    // Request
-    [self.refreshControl beginRefreshing];
-    [SLAttributeCollection findAll]
-    .then(^(NSArray *results) {
-        self.attributeCollections = results;
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-    })
-    .catch(^(NSError *error) {
-        DDLogInfo(@"%@", error);
-    });
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) handleRefresh:(UIRefreshControl *)refreshControl
-{
-    [SLAttributeCollection findAll]
-    .then(^(NSArray *results) {
-        self.attributeCollections = results;
-        [self.tableView reloadData];
-        [refreshControl endRefreshing];
-    })
-    .catch(^(NSError *error) {
-        DDLogInfo(@"%@", error);
-    });
 }
 
 #pragma mark - Table view data source
@@ -92,21 +50,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.attributeCollections count];
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SLAttributeCollectionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    SLAttributeCollection *attrColl = [self.attributeCollections objectAtIndex:indexPath.row];
-    cell.nameLabel.text = attrColl.name;
-    cell.descriptionLabel.text = attrColl.desc;
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
