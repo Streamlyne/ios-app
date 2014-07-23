@@ -7,12 +7,15 @@
 //
 
 #import "SLMetricsListViewController.h"
+#import "SLAttributeCollectionViewCell.h"
 
 @interface SLMetricsListViewController ()
 
 @end
 
 @implementation SLMetricsListViewController
+
+@synthesize attributeCollections;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,7 +40,18 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-
+    
+    // Init
+    self.attributeCollections = [NSArray array];
+    // Request
+    [SLAttributeCollection findAll]
+    .then(^(NSArray *results) {
+        self.attributeCollections = results;
+        [self.tableView reloadData];
+    })
+    .catch(^(NSError *error) {
+        DDLogInfo(@"%@", error);
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,14 +71,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return [self.attributeCollections count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    SLAttributeCollectionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    SLAttributeCollection *attrColl = [self.attributeCollections objectAtIndex:indexPath.row];
+    cell.nameLabel.text = attrColl.name;
+    cell.descriptionLabel.text = attrColl.desc;
     
     return cell;
 }

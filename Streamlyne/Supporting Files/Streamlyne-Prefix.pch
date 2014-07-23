@@ -26,3 +26,5 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 static int ddLogLevel = LOG_LEVEL_ERROR;
 #endif
+
+#import "StreamlyneSDK.h"

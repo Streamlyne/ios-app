@@ -10,4 +10,6 @@
 
 @interface SLMetricsListViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *attributeCollections;
+
 @end

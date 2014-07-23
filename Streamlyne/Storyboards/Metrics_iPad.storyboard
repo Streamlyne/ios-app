@@ -25,7 +25,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="71" id="fBg-wp-dut">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="71" id="fBg-wp-dut" customClass="SLAttributeCollectionViewCell">
                                 <rect key="frame" x="0.0" y="122" width="768" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBg-wp-dut" id="zxd-Z0-beJ">
@@ -49,6 +49,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="descriptionLabel" destination="hhf-b1-VVS" id="tNX-A4-605"/>
+                                    <outlet property="nameLabel" destination="7mT-iW-fvg" id="9Jo-2Z-djw"/>
                                     <segue destination="9nB-hY-BHF" kind="push" id="Rq2-Ze-md4"/>
                                 </connections>
                             </tableViewCell>
