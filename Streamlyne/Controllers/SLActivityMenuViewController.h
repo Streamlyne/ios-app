@@ -10,5 +10,6 @@
 
 @interface SLActivityMenuViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *welcomeUserLabel;
+- (IBAction)logoutBtnPressed:(id)sender;
 
 @end

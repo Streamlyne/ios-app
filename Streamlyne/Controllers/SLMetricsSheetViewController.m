@@ -7,12 +7,16 @@
 //
 
 #import "SLMetricsSheetViewController.h"
+#import "SLAttributeDataInputViewCell.h"
+#import <Streamlyne-Cocoa-SDK/SLAttribute.h>
 
 @interface SLMetricsSheetViewController ()
 
 @end
 
 @implementation SLMetricsSheetViewController
+
+@synthesize titleLabel, descriptionLabel, attributeCollection;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +36,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // Display AttributeCollection's meta data
+    [RACObserve(attributeCollection, name) subscribeNext:^(NSString *name)
+     {
+         self.titleLabel.text = name;
+     }];
+    [RACObserve(attributeCollection, desc) subscribeNext:^(NSString *description)
+     {
+         self.descriptionLabel.text = description;
+     }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,16 +65,30 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return [self.attributeCollection.attributes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    SLAttributeDataInputViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    NSLog(@"AttributeCollection: %@", self.attributeCollection);
+    NSLog(@"Attributes: %@", self.attributeCollection.attributes);
+    
+    NSOrderedSet *attributes = [self.attributeCollection.attributes copy];
+    NSLog(@"attributes: %@", attributes);
+    
+    if ([self.attributeCollection.attributes count] > indexPath.row)
+    {
+//        SLAttribute *attribute = [attributes objectAtIndex:indexPath.row];
+//        [cell setAttribute: attribute];
+    }
+    else
+    {
+        NSLog(@"Attribute list is too short (%i) to handle request for objectAtIndex %i", [self.attributeCollection.attributes count], indexPath.row);
+    }
     
     return cell;
 }

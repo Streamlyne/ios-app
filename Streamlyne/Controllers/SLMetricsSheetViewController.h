@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Streamlyne-Cocoa-SDK/SLAttributeCollection.h>
 
 @interface SLMetricsSheetViewController : UITableViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (strong, nonatomic) SLAttributeCollection *attributeCollection;
 
 @end

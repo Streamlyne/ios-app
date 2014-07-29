@@ -24,5 +24,7 @@
 - (void) switchRevealFrontViewControllerTo:(UIViewController *) newFrontViewController show:(Boolean)shouldShow;
 - (void) showActivityMenu;
 - (void) showActivityFeed;
+- (void) login;
+- (void) logout;
 
 @end

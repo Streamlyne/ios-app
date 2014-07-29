@@ -178,4 +178,9 @@
 }
 */
 
+- (IBAction)logoutBtnPressed:(id)sender {
+    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [d logout];
+}
+
 @end

@@ -27,4 +27,5 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 static int ddLogLevel = LOG_LEVEL_ERROR;
 #endif
 
-#import "StreamlyneSDK.h"
+#import <Streamlyne-Cocoa-SDK/StreamlyneSDK.h>
+#import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>

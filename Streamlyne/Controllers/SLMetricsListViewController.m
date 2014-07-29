@@ -8,6 +8,7 @@
 
 #import "SLMetricsListViewController.h"
 #import "SLAttributeCollectionViewCell.h"
+#import "SLMetricsSheetViewController.h"
 
 @interface SLMetricsListViewController ()
 
@@ -54,12 +55,13 @@
     [self.refreshControl beginRefreshing];
     [SLAttributeCollection findAll]
     .then(^(NSArray *results) {
+        NSLog(@"All AttributeCollections: %@", results);
         self.attributeCollections = results;
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
     })
     .catch(^(NSError *error) {
-        DDLogInfo(@"%@", error);
+        DDLogInfo(@"Error: %@", error);
     });
 }
 
@@ -100,6 +102,8 @@
 {
     SLAttributeCollectionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    NSLog(@"AttributeCollections: %@", self.attributeCollections);
+
     // Configure the cell...
     SLAttributeCollection *attrColl = [self.attributeCollections objectAtIndex:indexPath.row];
     cell.nameLabel.text = attrColl.name;
@@ -146,7 +150,11 @@
 }
 */
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"showAttributeCollectionSegue" sender:self];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -154,7 +162,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showAttributeCollectionSegue"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SLMetricsSheetViewController *controller = (SLMetricsSheetViewController *)segue.destinationViewController;
+        // set whatever you want here in your destination view controller
+        SLAttributeCollection *attributeCollection = [self.attributeCollections objectAtIndex:indexPath.row];
+        controller.attributeCollection = attributeCollection;
+    }
 }
-*/
 
 @end

@@ -73,12 +73,7 @@
                           withOrganization:organization]
     .then(^(SLClient *client, SLUser *me) {
         
-        // Setup
-        [d setupRevealController];
-        
-        // Step 4: Apply.
-        d.window.rootViewController = d.revealController;
-        [d.window makeKeyAndVisible];
+        [d login];
         
     }).catch(^(NSError *error) {
         

@@ -12,6 +12,7 @@
 #import "DDTTYLogger.h"
 // ViewControllers
 #import "SLHomeViewController.h"
+#import "SLLoginViewController.h"
 
 @implementation SLAppDelegate
 
@@ -27,7 +28,7 @@
     
     // Setup Defaults for Settings
     [self registerDefaultsFromSettingsBundle];
-
+    
     // Make Status Bar text white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -103,28 +104,29 @@
 
 -(PKRevealController *) setupRevealController {
     
-    // Step 1: Create your controllers.
-    SLHomeViewController *frontViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"homeViewController"];
-    
-    // Setup root navigation controller
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-    
-    // glyphicons_halflings_055_list.png
-    
-    UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
-    
-    // Step 2: Instantiate.
-    self.revealController = [PKRevealController revealControllerWithFrontViewController:frontNavigationController
-                                                                     leftViewController:leftViewController
-                             //                                       rightViewController:[self rightViewController]
-                             ];
-    // Step 3: Configure.
-    [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
-    self.revealController.delegate = self;
-    self.revealController.animationDuration = 0.25;
-    
-    [self switchRevealFrontViewControllerTo:frontViewController show:YES];
-    
+    if (self.revealController == nil) {
+        // Step 1: Create your controllers.
+        SLHomeViewController *frontViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"homeViewController"];
+        
+        // Setup root navigation controller
+        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+        
+        // glyphicons_halflings_055_list.png
+        
+        UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
+        
+        // Step 2: Instantiate.
+        self.revealController = [PKRevealController revealControllerWithFrontViewController:frontNavigationController
+                                                                         leftViewController:leftViewController
+                                 //                                       rightViewController:[self rightViewController]
+                                 ];
+        // Step 3: Configure.
+        [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
+        self.revealController.delegate = self;
+        self.revealController.animationDuration = 0.25;
+        
+        [self switchRevealFrontViewControllerTo:frontViewController show:YES];
+    }
     return self.revealController;
 }
 
@@ -144,8 +146,7 @@
 - (void) switchRevealFrontViewControllerTo:(UIViewController *) newFrontViewController show:(Boolean)shouldShow {
     
     // Switch front view controllers
-    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
-    UINavigationController *frontNavigationController = (UINavigationController *) d.revealController.frontViewController;
+    UINavigationController *frontNavigationController = (UINavigationController *) self.revealController.frontViewController;
     [frontNavigationController setViewControllers:@[newFrontViewController] animated:YES];
     
     // add left bar button item for activity menu
@@ -179,6 +180,7 @@
     [self.revealController showViewController:self.revealController.rightViewController];
 }
 
+#warning FIXME: Remove this and create the ActivitiesViewController
 - (UIViewController *)rightViewController
 {
     UIViewController *rightViewController = [[UIViewController alloc] init];
@@ -208,6 +210,24 @@
     {
         [self.revealController resignPresentationModeEntirely:NO animated:YES completion:nil];
     }
+}
+
+- (void) login
+{
+    // Setup
+    [self setupRevealController];
+    
+    // Step 4: Apply.
+    self.window.rootViewController = self.revealController;
+    [self.window makeKeyAndVisible];
+    
+}
+
+- (void) logout
+{
+    SLLoginViewController *loginViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"loginViewController"];
+    // Apply
+    self.window.rootViewController = loginViewController;
 }
 
 @end

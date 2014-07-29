@@ -6,3 +6,4 @@ pod 'PKRevealController'
 # Misc
 pod 'CocoaLumberjack'
 pod 'PromiseKit'
+pod 'ReactiveCocoa'

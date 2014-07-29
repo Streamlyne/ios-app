@@ -16,7 +16,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>api.streamlyne.co:5000</string>
+			<string>localhost:5000</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>

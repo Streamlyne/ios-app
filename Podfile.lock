@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ChuzzleKit (1.0.3)
+  - ChuzzleKit (1.0.4)
   - CocoaLumberjack (1.9.1):
     - CocoaLumberjack/Extensions
   - CocoaLumberjack/Core (1.9.1)
@@ -41,27 +41,34 @@ PODS:
     - ChuzzleKit
     - OMGHTTPURLRQ/UserAgent
   - PKRevealController (2.0.6)
-  - PromiseKit (0.9.13):
+  - PromiseKit (0.9.13.1):
     - PromiseKit/defaults
-  - PromiseKit/base (0.9.13)
-  - PromiseKit/defaults (0.9.13):
+  - PromiseKit/base (0.9.13.1)
+  - PromiseKit/defaults (0.9.13.1):
     - PromiseKit/Foundation
     - PromiseKit/timing
     - PromiseKit/UIAnimation
     - PromiseKit/UIKit
-  - PromiseKit/Foundation (0.9.13):
+  - PromiseKit/Foundation (0.9.13.1):
     - ChuzzleKit
     - OMGHTTPURLRQ
     - PromiseKit/base
-  - PromiseKit/private (0.9.13)
-  - PromiseKit/timing (0.9.13):
+  - PromiseKit/private (0.9.13.1)
+  - PromiseKit/timing (0.9.13.1):
     - PromiseKit/base
-  - PromiseKit/UIAnimation (0.9.13):
-    - PromiseKit/base
-    - PromiseKit/private
-  - PromiseKit/UIKit (0.9.13):
+  - PromiseKit/UIAnimation (0.9.13.1):
     - PromiseKit/base
     - PromiseKit/private
+  - PromiseKit/UIKit (0.9.13.1):
+    - PromiseKit/base
+    - PromiseKit/private
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
   - Streamlyne-Cocoa-SDK (0.0.5):
     - AFNetworking (~> 2.0)
     - MagicalRecord (~> 2.2)
@@ -71,6 +78,7 @@ DEPENDENCIES:
   - CocoaLumberjack
   - PKRevealController
   - PromiseKit
+  - ReactiveCocoa
   - Streamlyne-Cocoa-SDK (from `git@github.com:Streamlyne/Cocoa-SDK.git`)
 
 EXTERNAL SOURCES:
@@ -79,12 +87,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  ChuzzleKit: 2d6a1f9ba844ebca126642990106b8c24de117f7
+  ChuzzleKit: b47a96cb59dfb0b972cd539b8cc1e66c97b20f42
   CocoaLumberjack: 94accd5749f5c5d15134c8d50f34a973aed8ef69
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
   OMGHTTPURLRQ: ca928b53ae60cb4cc078d8f7201f4f647f435351
   PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
-  PromiseKit: b640456089cc366a69cdcd690f7fe5f757184c92
+  PromiseKit: 3fcc28033bae226eeefd6596525bdccd8ff8baad
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Streamlyne-Cocoa-SDK: c279e2535ee4e98a31b58a6ff31042c8bd495a5a
 
 COCOAPODS: 0.33.1
