@@ -16,7 +16,7 @@
     #import <CoreData/CoreData.h>
 
     // Lumberjack Logger
-    #import "DDLog.h"
+    #import <CocoaLumberjack/CocoaLumberjack.h>
 
 #endif
 

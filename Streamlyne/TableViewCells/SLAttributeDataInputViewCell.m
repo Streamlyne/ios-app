@@ -86,4 +86,41 @@
     
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    DDLogInfo(@"textFieldShouldReturn");
+    
+    // Get the value
+    NSString *valStr = dataInputTextField.text;
+    NSDecimalNumber *val = [NSDecimalNumber decimalNumberWithString:valStr];
+    DDLogInfo(@"Value: %@", val);
+    
+    if (val == [NSDecimalNumber notANumber])
+    {
+        return NO;
+    }
+    [textField resignFirstResponder];
+    
+    // Create
+    SLAttributeDatum *attributeDatum = [SLAttributeDatum createRecord:@{
+                                                                        @"value": val
+                                                                        }];
+    // Associate the Attribute to the AttributeDatum
+    attributeDatum.attribute = _attribute;
+    // Set the initial meta data dates
+    attributeDatum.dateCreated = [NSDate new];
+    attributeDatum.dateUpdated = [NSDate new];
+    DDLogInfo(@"Attribute: %@", _attribute);
+    DDLogInfo(@"AttributeDatum: %@", attributeDatum);
+    // Save
+    [attributeDatum save]
+    .then(^(SLAttributeDatum *attributeDatum) {
+        NSLog(@"Datum: %@", attributeDatum);
+        textField.text = @""; // Clear input field
+    })
+    .catch(^(NSError *error){
+        NSLog(@"%@", error);
+    });
+    return YES;
+}
+
 @end

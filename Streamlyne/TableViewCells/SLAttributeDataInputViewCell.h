@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Streamlyne-Cocoa-SDK/SLAttribute.h>
 
-@interface SLAttributeDataInputViewCell : UITableViewCell
+@interface SLAttributeDataInputViewCell : UITableViewCell<UITextFieldDelegate>
 
 @property (weak, nonatomic) SLAttribute *attribute;
 @property (weak, nonatomic) IBOutlet UILabel *assetNameLabel;

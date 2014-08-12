@@ -82,8 +82,8 @@
     
     if ([self.attributeCollection.attributes count] > indexPath.row)
     {
-//        SLAttribute *attribute = [attributes objectAtIndex:indexPath.row];
-//        [cell setAttribute: attribute];
+        SLAttribute *attribute = [attributes objectAtIndex:indexPath.row];
+        [cell setAttribute: attribute];
     }
     else
     {

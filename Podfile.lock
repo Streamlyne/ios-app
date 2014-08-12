@@ -20,48 +20,58 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ChuzzleKit (1.0.4)
-  - CocoaLumberjack (1.9.1):
+  - CocoaLumberjack (2.0.0-beta):
+    - CocoaLumberjack/CLI
+    - CocoaLumberjack/Core
     - CocoaLumberjack/Extensions
-  - CocoaLumberjack/Core (1.9.1)
-  - CocoaLumberjack/Extensions (1.9.1):
+  - CocoaLumberjack/CLI (2.0.0-beta):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Core (2.0.0-beta)
+  - CocoaLumberjack/Extensions (2.0.0-beta):
     - CocoaLumberjack/Core
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
-  - OMGHTTPURLRQ (1.1.4):
-    - ChuzzleKit
+  - OMGHTTPURLRQ (1.1.5):
     - OMGHTTPURLRQ/RQ
     - OMGHTTPURLRQ/UserAgent
     - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/RQ (1.1.4):
-    - ChuzzleKit
+  - OMGHTTPURLRQ/RQ (1.1.5):
     - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/UserAgent (1.1.4):
-    - ChuzzleKit
+  - OMGHTTPURLRQ/UserAgent (1.1.5):
     - OMGHTTPURLRQ/UserAgent
   - PKRevealController (2.0.6)
-  - PromiseKit (0.9.13.1):
-    - PromiseKit/defaults
-  - PromiseKit/base (0.9.13.1)
-  - PromiseKit/defaults (0.9.13.1):
-    - PromiseKit/Foundation
-    - PromiseKit/timing
-    - PromiseKit/UIAnimation
-    - PromiseKit/UIKit
-  - PromiseKit/Foundation (0.9.13.1):
-    - ChuzzleKit
+  - PromiseKit (0.9.14.3):
+    - PromiseKit/NSNotificationCenter
+    - PromiseKit/NSURLConnection
+    - PromiseKit/Pause
+    - PromiseKit/UIActionSheet
+    - PromiseKit/UIAlertView
+    - PromiseKit/UIView
+    - PromiseKit/UIViewController
+    - PromiseKit/Until
+    - PromiseKit/When
+  - PromiseKit/NSNotificationCenter (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/NSURLConnection (0.9.14.3):
     - OMGHTTPURLRQ
-    - PromiseKit/base
-  - PromiseKit/private (0.9.13.1)
-  - PromiseKit/timing (0.9.13.1):
-    - PromiseKit/base
-  - PromiseKit/UIAnimation (0.9.13.1):
-    - PromiseKit/base
-    - PromiseKit/private
-  - PromiseKit/UIKit (0.9.13.1):
-    - PromiseKit/base
-    - PromiseKit/private
+    - PromiseKit/Promise
+  - PromiseKit/Pause (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/Promise (0.9.14.3)
+  - PromiseKit/UIActionSheet (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIAlertView (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIView (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIViewController (0.9.14.3):
+    - PromiseKit/Promise
+  - PromiseKit/Until (0.9.14.3):
+    - PromiseKit/Promise
+    - PromiseKit/When
+  - PromiseKit/When (0.9.14.3):
+    - PromiseKit/Promise
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
   - ReactiveCocoa/Core (2.3.1):
@@ -87,12 +97,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  ChuzzleKit: b47a96cb59dfb0b972cd539b8cc1e66c97b20f42
-  CocoaLumberjack: 94accd5749f5c5d15134c8d50f34a973aed8ef69
+  CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
-  OMGHTTPURLRQ: ca928b53ae60cb4cc078d8f7201f4f647f435351
+  OMGHTTPURLRQ: c8dd3f83341702f0a3cae94e09d7e368d79a8b6e
   PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
-  PromiseKit: 3fcc28033bae226eeefd6596525bdccd8ff8baad
+  PromiseKit: 2eba66fea7b3f7cdb1143f1659ee49125bbb145c
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Streamlyne-Cocoa-SDK: c279e2535ee4e98a31b58a6ff31042c8bd495a5a
 
