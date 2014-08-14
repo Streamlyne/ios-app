@@ -51,18 +51,7 @@
     
     // Init
     self.attributeCollections = [NSArray array];
-    // Request
-    [self.refreshControl beginRefreshing];
-    [SLAttributeCollection findAll]
-    .then(^(NSArray *results) {
-        NSLog(@"All AttributeCollections: %@", results);
-        self.attributeCollections = results;
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-    })
-    .catch(^(NSError *error) {
-        DDLogInfo(@"Error: %@", error);
-    });
+    [self handleRefresh:refreshControl];
 }
 
 - (void)didReceiveMemoryWarning

@@ -47,12 +47,36 @@
          self.descriptionLabel.text = description;
      }];
     
+    // Initialize Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    // Configure Refresh Control
+    [refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
+    // Configure View Controller
+    [self setRefreshControl:refreshControl];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) handleRefresh:(UIRefreshControl *)refreshControl
+{
+    // Request
+    [self.refreshControl beginRefreshing];
+    [self.attributeCollection reloadRecord]
+    //[SLAttributeCollection findById:attributeCollection.nid]
+    .then(^(SLAttributeCollection *record) {
+        NSLog(@"attributeCollection: %@", record);
+        self.attributeCollection = record;
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    })
+    .catch(^(NSError *error) {
+        DDLogInfo(@"Error: %@", error);
+    });
 }
 
 #pragma mark - Table view data source
@@ -74,11 +98,11 @@
     SLAttributeDataInputViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSLog(@"AttributeCollection: %@", self.attributeCollection);
-    NSLog(@"Attributes: %@", self.attributeCollection.attributes);
+    //NSLog(@"AttributeCollection: %@", self.attributeCollection);
+    //NSLog(@"Attributes: %@", self.attributeCollection.attributes);
     
     NSOrderedSet *attributes = [self.attributeCollection.attributes copy];
-    NSLog(@"attributes: %@", attributes);
+    //NSLog(@"attributes: %@", attributes);
     
     if ([self.attributeCollection.attributes count] > indexPath.row)
     {

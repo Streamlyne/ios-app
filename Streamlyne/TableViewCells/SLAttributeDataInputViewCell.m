@@ -31,19 +31,6 @@
     return self;
 }
 
-- (void) layoutSubviews
-{
-    [[self superclass] layerClass];
-    
-    NSLog(@"layoutSubviews: %@", self.attribute);
-    if (self.attribute != nil)
-    {
-        self.attributeDescriptionLabel.text = _attribute.name;
-        self.assetNameLabel.text = _attribute.assetName;
-        self.assetDescriptionLabel.text = _attribute.desc;
-    }
-}
-
 - (void)awakeFromNib
 {
     // Initialization code
@@ -58,13 +45,12 @@
 
 - (void) setAttribute:(SLAttribute *)attribute
 {
-    // Remove original bindings
-    
     // Switch to new attribute
     _attribute = attribute;
-    NSLog(@"Attribute: %@", attribute);
+    NSLog(@"Set Attribute: %@", attribute);
+    
     // Bind to new attribute
-    [RACObserve(attribute, desc) subscribeNext:^(NSString *description)
+    [RACObserve(self.attribute, desc) subscribeNext:^(NSString *description)
      {
          NSLog(@"Description: %@", description);
          self.attributeDescriptionLabel.text = description;
@@ -73,7 +59,7 @@
     attribute.asset.then(^(SLAsset *asset) {
         DDLogInfo(@"Attribute's Asset: %@", asset);
         
-        [RACObserve(asset, name) subscribeNext:^(NSString *assetName)
+        [RACObserve(asset, humanName) subscribeNext:^(NSString *assetName)
          {
              NSLog(@"assetName: %@", assetName);
              self.assetNameLabel.text = assetName;

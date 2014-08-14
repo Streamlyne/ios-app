@@ -105,8 +105,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asset Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-R8-zOf">
-                                            <rect key="frame" x="20" y="15" width="93" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Asset Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-R8-zOf">
+                                            <rect key="frame" x="20" y="15" width="235" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                                             <color key="textColor" red="0.51764708757400513" green="0.51764708757400513" blue="0.51764708757400513" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We6-rG-TEk">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We6-rG-TEk">
                                             <rect key="frame" x="263" y="0.0" width="2" height="99"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.97647064924240112" green="0.97647064924240112" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
@@ -145,6 +145,9 @@
                                             </connections>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="We6-rG-TEk" firstAttribute="leading" secondItem="VZ4-R8-zOf" secondAttribute="trailing" constant="8" id="jPU-aM-mTe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="assetDescriptionLabel" destination="YXA-fB-Nk3" id="G1I-GW-iBM"/>
