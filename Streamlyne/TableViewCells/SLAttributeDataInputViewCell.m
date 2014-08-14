@@ -70,19 +70,21 @@
          self.attributeDescriptionLabel.text = description;
      }];
     
-    
-    [RACObserve(attribute, assetName) subscribeNext:^(NSString *assetName)
-     {
-         NSLog(@"assetName: %@", assetName);
-         self.assetNameLabel.text = assetName;
-     }];
-    
-    
-    [RACObserve(attribute, name) subscribeNext:^(NSString *name)
-     {
-         NSLog(@"name: %@", name);
-         self.assetDescriptionLabel.text = name;
-     }];
+    attribute.asset.then(^(SLAsset *asset) {
+        DDLogInfo(@"Attribute's Asset: %@", asset);
+        
+        [RACObserve(asset, name) subscribeNext:^(NSString *assetName)
+         {
+             NSLog(@"assetName: %@", assetName);
+             self.assetNameLabel.text = assetName;
+         }];
+        
+        [RACObserve(asset, desc) subscribeNext:^(NSString *description)
+         {
+             NSLog(@"description: %@", description);
+             self.assetDescriptionLabel.text = description;
+         }];
+    });
     
 }
 
