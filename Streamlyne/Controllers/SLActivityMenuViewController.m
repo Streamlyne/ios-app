@@ -116,7 +116,14 @@
     NSDictionary *act = self.activities[indexPath.row];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
-    NSString *storyboardName = [NSString stringWithFormat:@"%@_%@", act[@"storyboard"], @"iPad"];
+    NSString *storyboardSuffix = @"iPad";
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
+    {
+        // The device is an iPhone or iPod touch.
+        storyboardSuffix = @"iPhone";
+    }
+
+    NSString *storyboardName = [NSString stringWithFormat:@"%@_%@", act[@"storyboard"], storyboardSuffix];
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
     
     // Load the view controller with the identifier string myTabBar

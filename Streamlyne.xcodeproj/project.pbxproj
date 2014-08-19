@@ -1388,6 +1388,7 @@
 		77A50118196D9169000BADC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FC196D9169000BADC0 /* CoreData.framework */; };
 		77A50120196D9169000BADC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A5011E196D9169000BADC0 /* InfoPlist.strings */; };
 		77A50122196D9169000BADC0 /* StreamlyneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A50121196D9169000BADC0 /* StreamlyneTests.m */; };
+		77C91FC519A3A200000634DF /* Metrics_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C91FC419A3A200000634DF /* Metrics_iPhone.storyboard */; };
 		77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */; };
 		77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */; };
 		77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */; };
@@ -2799,6 +2800,7 @@
 		77A5011D196D9169000BADC0 /* StreamlyneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreamlyneTests-Info.plist"; sourceTree = "<group>"; };
 		77A5011F196D9169000BADC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A50121196D9169000BADC0 /* StreamlyneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamlyneTests.m; sourceTree = "<group>"; };
+		77C91FC419A3A200000634DF /* Metrics_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metrics_iPhone.storyboard; sourceTree = "<group>"; };
 		77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred.png; sourceTree = "<group>"; };
 		77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened.png; sourceTree = "<group>"; };
 		77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened_cropped.png; sourceTree = "<group>"; };
@@ -4287,6 +4289,7 @@
 			isa = PBXGroup;
 			children = (
 				77A404A319A24D7400068A4C /* Main_iPhone.storyboard */,
+				77C91FC419A3A200000634DF /* Metrics_iPhone.storyboard */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -5158,6 +5161,7 @@
 				772B4BD9196DD0A100050B7E /* glyphicons_halflings_077_eject.png in Resources */,
 				772B52A0196DD5EE00050B7E /* glyphicons_274_beer.png in Resources */,
 				772B52F8196DD5EE00050B7E /* glyphicons_318_more_items.png in Resources */,
+				77C91FC519A3A200000634DF /* Metrics_iPhone.storyboard in Resources */,
 				772B52CD196DD5EE00050B7E /* glyphicons_296_grater@2x.png in Resources */,
 				772B4B78196DD0A100050B7E /* glyphicons_halflings_028_play-circle@2x.png in Resources */,
 				772B5093196DD5EE00050B7E /* glyphicons_011_camera@2x.png in Resources */,
