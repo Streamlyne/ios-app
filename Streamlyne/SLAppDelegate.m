@@ -112,7 +112,6 @@
         UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
         
         // glyphicons_halflings_055_list.png
-        
         UITableViewController *leftViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"activityMenuViewController"];
         
         // Step 2: Instantiate.
@@ -121,7 +120,16 @@
                                  //                                       rightViewController:[self rightViewController]
                                  ];
         // Step 3: Configure.
-        [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            // The device is an iPad running iOS 3.2 or later.
+            [self.revealController setMinimumWidth:620.0 maximumWidth:644.0 forViewController:leftViewController];
+        }
+        else
+        {
+            // The device is an iPhone or iPod touch.
+            [self.revealController setMinimumWidth:276.0 maximumWidth:280.0 forViewController:leftViewController];
+        }
         self.revealController.delegate = self;
         self.revealController.animationDuration = 0.25;
         

@@ -11,6 +11,7 @@
 
 @interface SLAttributeDataInputViewCell : UITableViewCell<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *attributeNameLabel;
 @property (weak, nonatomic) SLAttribute *attribute;
 @property (weak, nonatomic) IBOutlet UILabel *assetNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *assetDescriptionLabel;

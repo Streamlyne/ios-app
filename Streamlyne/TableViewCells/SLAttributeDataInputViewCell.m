@@ -10,7 +10,9 @@
 
 @implementation SLAttributeDataInputViewCell
 
-@synthesize assetNameLabel, assetDescriptionLabel, dataInputTextField, attributeDescriptionLabel, attribute = _attribute;
+@synthesize assetNameLabel, assetDescriptionLabel, dataInputTextField, attributeDescriptionLabel,
+attributeNameLabel,
+attribute = _attribute;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -39,7 +41,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -54,6 +56,11 @@
      {
          NSLog(@"Description: %@", description);
          self.attributeDescriptionLabel.text = description;
+     }];
+    [RACObserve(self.attribute, name) subscribeNext:^(NSString *name)
+     {
+         NSLog(@"Name: %@", name);
+         self.attributeNameLabel.text = name;
      }];
     
     attribute.asset.then(^(SLAsset *asset) {

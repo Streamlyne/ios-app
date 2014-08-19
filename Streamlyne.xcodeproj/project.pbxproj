@@ -1373,6 +1373,7 @@
 		77754CF0197EDC7A005772F4 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CE0197EDC7A005772F4 /* iTunesArtwork.png */; };
 		77754CF1197EDC7A005772F4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77754CE1197EDC7A005772F4 /* iTunesArtwork@2x.png */; };
 		7778F67C197F68F400803E94 /* SLAttributeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7778F67B197F68F400803E94 /* SLAttributeCollectionViewCell.m */; };
+		77A404A419A24D7400068A4C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A404A319A24D7400068A4C /* Main_iPhone.storyboard */; };
 		77A500F7196D9169000BADC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F6196D9169000BADC0 /* Foundation.framework */; };
 		77A500F9196D9169000BADC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500F8196D9169000BADC0 /* CoreGraphics.framework */; };
 		77A500FB196D9169000BADC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A500FA196D9169000BADC0 /* UIKit.framework */; };
@@ -2780,6 +2781,7 @@
 		77754CE1197EDC7A005772F4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		7778F67A197F68F400803E94 /* SLAttributeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttributeCollectionViewCell.h; sourceTree = "<group>"; };
 		7778F67B197F68F400803E94 /* SLAttributeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAttributeCollectionViewCell.m; sourceTree = "<group>"; };
+		77A404A319A24D7400068A4C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		77A500F3196D9169000BADC0 /* Streamlyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streamlyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A500F6196D9169000BADC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77A500F8196D9169000BADC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -4214,9 +4216,8 @@
 		77615BF7196DBB2300F8317E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				77615BFC196DBDF600F8317E /* Main_iPad.storyboard */,
-				77D708EA19706D1B00616266 /* Assets_iPad.storyboard */,
-				77D708EC1970832A00616266 /* Metrics_iPad.storyboard */,
+				77A404A219A24D4B00068A4C /* iPhone */,
+				77A404A119A24D4300068A4C /* iPad */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -4270,6 +4271,24 @@
 				77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		77A404A119A24D4300068A4C /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				77615BFC196DBDF600F8317E /* Main_iPad.storyboard */,
+				77D708EA19706D1B00616266 /* Assets_iPad.storyboard */,
+				77D708EC1970832A00616266 /* Metrics_iPad.storyboard */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		77A404A219A24D4B00068A4C /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				77A404A319A24D7400068A4C /* Main_iPhone.storyboard */,
+			);
+			path = iPhone;
 			sourceTree = "<group>";
 		};
 		77A500EA196D9169000BADC0 = {
@@ -4787,6 +4806,7 @@
 				772B4BBA196DD0A100050B7E /* glyphicons_halflings_061_map-marker@2x.png in Resources */,
 				772B520E196DD5EE00050B7E /* glyphicons_201_upload.png in Resources */,
 				772B5407196DD5EE00050B7E /* glyphicons_453_kiosk@2x.png in Resources */,
+				77A404A419A24D7400068A4C /* Main_iPhone.storyboard in Resources */,
 				772B5098196DD5EE00050B7E /* glyphicons_014_train.png in Resources */,
 				772B4CBA196DD0A100050B7E /* glyphicons_halflings_189_sound_dolby@2x.png in Resources */,
 				772B52C1196DD5EE00050B7E /* glyphicons_290_skull@2x.png in Resources */,

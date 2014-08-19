@@ -118,8 +118,8 @@
                                             <color key="textColor" red="0.5215686559677124" green="0.60784316062927246" blue="0.62745100259780884" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Water Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y82-7w-ID6">
-                                            <rect key="frame" x="279" y="39" width="301" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Attribute Description..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y82-7w-ID6">
+                                            <rect key="frame" x="273" y="52" width="307" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="0.51764708757400513" green="0.51764708757400513" blue="0.51764708757400513" alpha="1" colorSpace="deviceRGB"/>
@@ -139,11 +139,18 @@
                                             <rect key="frame" x="598" y="20" width="150" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="send"/>
                                             <connections>
                                                 <outlet property="delegate" destination="6Uh-0G-Fy2" id="B2q-eL-c3e"/>
                                             </connections>
                                         </textField>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Attribute Name..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAU-CP-CjQ">
+                                            <rect key="frame" x="273" y="20" width="307" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="We6-rG-TEk" firstAttribute="leading" secondItem="VZ4-R8-zOf" secondAttribute="trailing" constant="8" id="jPU-aM-mTe"/>
@@ -153,6 +160,7 @@
                                     <outlet property="assetDescriptionLabel" destination="YXA-fB-Nk3" id="G1I-GW-iBM"/>
                                     <outlet property="assetNameLabel" destination="VZ4-R8-zOf" id="izo-Il-Z5z"/>
                                     <outlet property="attributeDescriptionLabel" destination="Y82-7w-ID6" id="dSO-E3-Mio"/>
+                                    <outlet property="attributeNameLabel" destination="FAU-CP-CjQ" id="9gH-dV-RqH"/>
                                     <outlet property="dataInputTextField" destination="Erj-Ib-AuG" id="FJ9-0Q-wvN"/>
                                 </connections>
                             </tableViewCell>

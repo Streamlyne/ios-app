@@ -38,12 +38,13 @@
                                 @"title":@"Metrics",
                                 @"storyboard": @"Metrics",
                                 @"identifier": @"metricsViewController"
-                                },
-                            @{
-                                @"title":@"Assets",
-                                @"storyboard": @"Assets",
-                                @"identifier": @"assetsViewController"
                                 }
+//                            ,
+//                            @{
+//                                @"title":@"Assets",
+//                                @"storyboard": @"Assets",
+//                                @"identifier": @"assetsViewController"
+//                                }
                             ];
     }
     return self;
