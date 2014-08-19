@@ -32,6 +32,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.emailTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    self.organizationTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +89,20 @@
         
     });
 
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    if (theTextField == self.organizationTextField) {
+        [theTextField resignFirstResponder];
+        [self loginBtnPressed:nil];
+    } else if (theTextField == self.passwordTextField) {
+        [self.organizationTextField becomeFirstResponder];
+    } else if (theTextField == self.emailTextField) {
+        [self.passwordTextField becomeFirstResponder];
+    } else {
+        [theTextField resignFirstResponder];
+    }
+    return YES;
 }
 
 @end
