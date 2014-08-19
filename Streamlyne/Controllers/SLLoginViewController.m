@@ -84,12 +84,12 @@
         
     }).catch(^(NSError *error) {
         
+        [hud hide:YES];
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
                                                            message:error.localizedRecoverySuggestion
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
-        [hud hide:YES];
         [theAlert show];
         
     });

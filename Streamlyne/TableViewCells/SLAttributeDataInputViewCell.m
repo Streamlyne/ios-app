@@ -7,6 +7,7 @@
 //
 
 #import "SLAttributeDataInputViewCell.h"
+#import "MBProgressHUD.h"
 
 @implementation SLAttributeDataInputViewCell
 
@@ -84,6 +85,11 @@ attribute = _attribute;
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     DDLogInfo(@"textFieldShouldReturn");
     
+    // Show progress spinner
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.superview animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    
     // Get the value
     NSString *valStr = dataInputTextField.text;
     NSDecimalNumber *val = [NSDecimalNumber decimalNumberWithString:valStr];
@@ -91,6 +97,15 @@ attribute = _attribute;
     
     if (val == [NSDecimalNumber notANumber])
     {
+        [hud hide:YES];
+        
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Invalid Input"
+                                                           message:@"Input must be a number."
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+        
         return NO;
     }
     [textField resignFirstResponder];
@@ -111,9 +126,19 @@ attribute = _attribute;
     .then(^(SLAttributeDatum *attributeDatum) {
         NSLog(@"Datum: %@", attributeDatum);
         textField.text = @""; // Clear input field
+        [hud hide:YES];
     })
     .catch(^(NSError *error){
         NSLog(@"%@", error);
+        [hud hide:YES];
+        
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                           message:error.localizedRecoverySuggestion
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+
     });
     return YES;
 }
