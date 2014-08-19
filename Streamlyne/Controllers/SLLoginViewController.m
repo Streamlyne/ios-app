@@ -9,10 +9,10 @@
 #import "SLLoginViewController.h"
 #import "SLAppDelegate.h"
 #import "StreamlyneSDK.h"
+#import "MBProgressHUD.h"
 
 @interface SLLoginViewController ()
 - (IBAction)loginBtnPressed:(UIButton *)sender;
-
 @end
 
 @implementation SLLoginViewController
@@ -70,12 +70,16 @@
     NSString *password = passwordTextField.text;
     NSString *organization = organizationTextField.text;
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
     // Login with credentials
     [client authenticateWithUserEmail:email
                               withPassword:password
                           withOrganization:organization]
     .then(^(SLClient *client, SLUser *me) {
         
+        [hud hide:YES];
         [d login];
         
     }).catch(^(NSError *error) {
@@ -85,6 +89,7 @@
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
+        [hud hide:YES];
         [theAlert show];
         
     });
