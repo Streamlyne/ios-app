@@ -1389,9 +1389,7 @@
 		77A50120196D9169000BADC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A5011E196D9169000BADC0 /* InfoPlist.strings */; };
 		77A50122196D9169000BADC0 /* StreamlyneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A50121196D9169000BADC0 /* StreamlyneTests.m */; };
 		77C91FC519A3A200000634DF /* Metrics_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C91FC419A3A200000634DF /* Metrics_iPhone.storyboard */; };
-		77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */; };
-		77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */; };
-		77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */; };
+		77C91FC719A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C91FC619A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png */; };
 		77D708EB19706D1B00616266 /* Assets_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EA19706D1B00616266 /* Assets_iPad.storyboard */; };
 		77D708ED1970832A00616266 /* Metrics_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EC1970832A00616266 /* Metrics_iPad.storyboard */; };
 		77DBA36D1987367100E59003 /* SLAttributeDataInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */; };
@@ -2801,9 +2799,7 @@
 		77A5011F196D9169000BADC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A50121196D9169000BADC0 /* StreamlyneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamlyneTests.m; sourceTree = "<group>"; };
 		77C91FC419A3A200000634DF /* Metrics_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metrics_iPhone.storyboard; sourceTree = "<group>"; };
-		77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred.png; sourceTree = "<group>"; };
-		77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened.png; sourceTree = "<group>"; };
-		77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened_cropped.png; sourceTree = "<group>"; };
+		77C91FC619A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil_gas_plant_blurred_darkened_cropped.png; sourceTree = "<group>"; };
 		77D708EA19706D1B00616266 /* Assets_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assets_iPad.storyboard; sourceTree = "<group>"; };
 		77D708EC1970832A00616266 /* Metrics_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metrics_iPad.storyboard; sourceTree = "<group>"; };
 		77DBA36B1987367100E59003 /* SLAttributeDataInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttributeDataInputViewCell.h; sourceTree = "<group>"; };
@@ -4205,9 +4201,7 @@
 			isa = PBXGroup;
 			children = (
 				77754CF2197EDC81005772F4 /* AppIcons */,
-				77D708E8196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png */,
-				77D708E6196EF39400616266 /* oil_gas_plant_blurred_darkened.png */,
-				77D708E4196EF01D00616266 /* oil_gas_plant_blurred.png */,
+				77C91FC619A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png */,
 				773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */,
 				772B5428196DD60A00050B7E /* Glyphicons */,
 				77615BF4196DBA3000F8317E /* logo_mini.png */,
@@ -4530,7 +4524,6 @@
 				772B4C42196DD0A100050B7E /* glyphicons_halflings_129_hand-down@2x.png in Resources */,
 				772B50E7196DD5EE00050B7E /* glyphicons_053_alarm@2x.png in Resources */,
 				772B4BC6196DD0A100050B7E /* glyphicons_halflings_067_move@2x.png in Resources */,
-				77D708E7196EF39400616266 /* oil_gas_plant_blurred_darkened.png in Resources */,
 				772B50D6196DD5EE00050B7E /* glyphicons_045_calendar.png in Resources */,
 				77754CEF197EDC7A005772F4 /* Icon@2x.png in Resources */,
 				772B5422196DD5EE00050B7E /* glyphicons_467_server_flag.png in Resources */,
@@ -4737,7 +4730,6 @@
 				772B53BF196DD5EE00050B7E /* glyphicons_417_disk_remove@2x.png in Resources */,
 				772B52C7196DD5EE00050B7E /* glyphicons_293_french_press@2x.png in Resources */,
 				772B51E2196DD5EE00050B7E /* glyphicons_179_eject.png in Resources */,
-				77D708E9196EF51F00616266 /* oil_gas_plant_blurred_darkened_cropped.png in Resources */,
 				772B5284196DD5EE00050B7E /* glyphicons_260_pool.png in Resources */,
 				772B51E9196DD5EE00050B7E /* glyphicons_182_mute@2x.png in Resources */,
 				772B53A3196DD5EE00050B7E /* glyphicons_403_sorting@2x.png in Resources */,
@@ -5407,6 +5399,7 @@
 				772B4B7D196DD0A100050B7E /* glyphicons_halflings_031_list-alt.png in Resources */,
 				772B53AC196DD5EE00050B7E /* glyphicons_408_sort-by-attributes.png in Resources */,
 				772B531D196DD5EE00050B7E /* glyphicons_336_iphone_shake@2x.png in Resources */,
+				77C91FC719A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png in Resources */,
 				772B540F196DD5EE00050B7E /* glyphicons_457_transfer@2x.png in Resources */,
 				772B5372196DD5EE00050B7E /* glyphicons_379_electrical_socket_us.png in Resources */,
 				772B5191196DD5EE00050B7E /* glyphicons_138_picture@2x.png in Resources */,
@@ -5792,7 +5785,6 @@
 				772B5320196DD5EE00050B7E /* glyphicons_338_turtle.png in Resources */,
 				772B519E196DD5EE00050B7E /* glyphicons_145_folder_plus.png in Resources */,
 				772B4BE1196DD0A100050B7E /* glyphicons_halflings_081_minus-sign.png in Resources */,
-				77D708E5196EF01D00616266 /* oil_gas_plant_blurred.png in Resources */,
 				772B4CCE196DD0A100050B7E /* glyphicons_halflings_199_tree_deciduous@2x.png in Resources */,
 				772B53EF196DD5EE00050B7E /* glyphicons_441_phone_alt@2x.png in Resources */,
 				772B5204196DD5EE00050B7E /* glyphicons_196_circle_exclamation_mark.png in Resources */,
