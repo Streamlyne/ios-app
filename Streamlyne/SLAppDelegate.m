@@ -13,6 +13,7 @@
 // ViewControllers
 #import "SLHomeViewController.h"
 #import "SLLoginViewController.h"
+#import "TestFlight.h"
 
 @implementation SLAppDelegate
 
@@ -20,6 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // TestFlight
+    [TestFlight takeOff:@"997b9452-2d04-4256-9b1f-8f735c28c1b5"];
+
     // Configure CocoaLumberjack
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];

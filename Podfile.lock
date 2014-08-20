@@ -42,7 +42,7 @@ PODS:
   - OMGHTTPURLRQ/UserAgent (1.1.5):
     - OMGHTTPURLRQ/UserAgent
   - PKRevealController (2.0.6)
-  - PromiseKit (0.9.15.3):
+  - PromiseKit (0.9.16):
     - PromiseKit/NSNotificationCenter
     - PromiseKit/NSURLConnection
     - PromiseKit/Pause
@@ -52,26 +52,26 @@ PODS:
     - PromiseKit/UIViewController
     - PromiseKit/Until
     - PromiseKit/When
-  - PromiseKit/NSNotificationCenter (0.9.15.3):
+  - PromiseKit/NSNotificationCenter (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (0.9.15.3):
+  - PromiseKit/NSURLConnection (0.9.16):
     - OMGHTTPURLRQ
     - PromiseKit/Promise
-  - PromiseKit/Pause (0.9.15.3):
+  - PromiseKit/Pause (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/Promise (0.9.15.3)
-  - PromiseKit/UIActionSheet (0.9.15.3):
+  - PromiseKit/Promise (0.9.16)
+  - PromiseKit/UIActionSheet (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/UIAlertView (0.9.15.3):
+  - PromiseKit/UIAlertView (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/UIView (0.9.15.3):
+  - PromiseKit/UIView (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/UIViewController (0.9.15.3):
+  - PromiseKit/UIViewController (0.9.16):
     - PromiseKit/Promise
-  - PromiseKit/Until (0.9.15.3):
+  - PromiseKit/Until (0.9.16):
     - PromiseKit/Promise
     - PromiseKit/When
-  - PromiseKit/When (0.9.15.3):
+  - PromiseKit/When (0.9.16):
     - PromiseKit/Promise
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
@@ -84,6 +84,7 @@ PODS:
     - AFNetworking (~> 2.0)
     - MagicalRecord (~> 2.2)
     - PromiseKit
+  - TestFlightSDK (3.0.2)
 
 DEPENDENCIES:
   - CocoaLumberjack
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - PromiseKit
   - ReactiveCocoa
   - Streamlyne-Cocoa-SDK (from `git@github.com:Streamlyne/Cocoa-SDK.git`)
+  - TestFlightSDK
 
 EXTERNAL SOURCES:
   Streamlyne-Cocoa-SDK:
@@ -104,8 +106,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   OMGHTTPURLRQ: c8dd3f83341702f0a3cae94e09d7e368d79a8b6e
   PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
-  PromiseKit: 5ae80a1d3415e1a42fe6605e8c963b08852d0144
+  PromiseKit: 824f03652bdfc44239eca06277dbd9385759954c
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Streamlyne-Cocoa-SDK: c279e2535ee4e98a31b58a6ff31042c8bd495a5a
+  TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
 
 COCOAPODS: 0.33.1
