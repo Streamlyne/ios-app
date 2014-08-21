@@ -231,7 +231,19 @@
     [self setupRevealController];
     
     // Step 4: Apply.
-    self.window.rootViewController = self.revealController;
+    // Animate Transmission
+    [UIView
+     transitionWithView:self.window
+     duration:0.5
+     options:UIViewAnimationOptionTransitionCrossDissolve
+     animations:^(void) {
+         BOOL oldState = [UIView areAnimationsEnabled];
+         [UIView setAnimationsEnabled:NO];
+         self.window.rootViewController = self.revealController;
+         [UIView setAnimationsEnabled:oldState];
+     }
+     completion:nil];
+    
     [self.window makeKeyAndVisible];
     
 }
@@ -240,7 +252,18 @@
 {
     SLLoginViewController *loginViewController = [[UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:nil] instantiateViewControllerWithIdentifier:@"loginViewController"];
     // Apply
-    self.window.rootViewController = loginViewController;
+    // Animate Transmission
+    [UIView
+     transitionWithView:self.window
+     duration:0.5
+     options:UIViewAnimationOptionTransitionCrossDissolve
+     animations:^(void) {
+         BOOL oldState = [UIView areAnimationsEnabled];
+         [UIView setAnimationsEnabled:NO];
+         self.window.rootViewController = loginViewController;
+         [UIView setAnimationsEnabled:oldState];
+     }
+     completion:nil];
 }
 
 @end
