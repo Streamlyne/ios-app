@@ -1395,6 +1395,10 @@
 		77DBA36D1987367100E59003 /* SLAttributeDataInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */; };
 		77F5014519A58F860016ACD1 /* SLActivityMenuItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F5014419A58F860016ACD1 /* SLActivityMenuItemViewCell.m */; };
 		77F5014919A59A5B0016ACD1 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F5014819A59A5B0016ACD1 /* UITextField+PlaceholderColor.m */; };
+		77F5014C19A5A68C0016ACD1 /* Default-Portrait@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5014B19A5A68C0016ACD1 /* Default-Portrait@2x~iPad.png */; };
+		77F5014E19A5A6EF0016ACD1 /* Default-Landscape@2x-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5014D19A5A6EF0016ACD1 /* Default-Landscape@2x-iPad.png */; };
+		77F5015119A5A74F0016ACD1 /* Default-Portrait@2x~iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5014F19A5A74F0016ACD1 /* Default-Portrait@2x~iPhone.png */; };
+		77F5015419A5A78C0016ACD1 /* Default-Portrait@2x~iPhoneR4.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5015319A5A78C0016ACD1 /* Default-Portrait@2x~iPhoneR4.png */; };
 		80FDBC1A8ABD4EB59C216B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D6CE134AE0437A89021D6B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -2810,6 +2814,10 @@
 		77F5014419A58F860016ACD1 /* SLActivityMenuItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLActivityMenuItemViewCell.m; sourceTree = "<group>"; };
 		77F5014719A59A5B0016ACD1 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
 		77F5014819A59A5B0016ACD1 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
+		77F5014B19A5A68C0016ACD1 /* Default-Portrait@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~iPad.png"; sourceTree = "<group>"; };
+		77F5014D19A5A6EF0016ACD1 /* Default-Landscape@2x-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x-iPad.png"; sourceTree = "<group>"; };
+		77F5014F19A5A74F0016ACD1 /* Default-Portrait@2x~iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~iPhone.png"; sourceTree = "<group>"; };
+		77F5015319A5A78C0016ACD1 /* Default-Portrait@2x~iPhoneR4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~iPhoneR4.png"; sourceTree = "<group>"; };
 		E622A477CFFF4CAC81544F77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -4206,6 +4214,7 @@
 		77615BF6196DBA3E00F8317E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				77F5014A19A5A6090016ACD1 /* Launch_Images */,
 				77754CF2197EDC81005772F4 /* AppIcons */,
 				77C91FC619A3B6F2000634DF /* oil_gas_plant_blurred_darkened_cropped.png */,
 				773B7B95196DE0C600E559DD /* oil_gas_plant.jpg */,
@@ -4382,6 +4391,17 @@
 				77F5014819A59A5B0016ACD1 /* UITextField+PlaceholderColor.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		77F5014A19A5A6090016ACD1 /* Launch_Images */ = {
+			isa = PBXGroup;
+			children = (
+				77F5015319A5A78C0016ACD1 /* Default-Portrait@2x~iPhoneR4.png */,
+				77F5014F19A5A74F0016ACD1 /* Default-Portrait@2x~iPhone.png */,
+				77F5014D19A5A6EF0016ACD1 /* Default-Landscape@2x-iPad.png */,
+				77F5014B19A5A68C0016ACD1 /* Default-Portrait@2x~iPad.png */,
+			);
+			name = Launch_Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4696,6 +4716,7 @@
 				772B4B4E196DD0A100050B7E /* glyphicons_halflings_007_user@2x.png in Resources */,
 				772B50E4196DD5EE00050B7E /* glyphicons_052_eye_close.png in Resources */,
 				772B520A196DD5EE00050B7E /* glyphicons_199_ban.png in Resources */,
+				77F5015119A5A74F0016ACD1 /* Default-Portrait@2x~iPhone.png in Resources */,
 				772B530B196DD5EE00050B7E /* glyphicons_327_sampler@2x.png in Resources */,
 				772B5089196DD5EE00050B7E /* glyphicons_006_user_add@2x.png in Resources */,
 				772B5234196DD5EE00050B7E /* glyphicons_220_play_button.png in Resources */,
@@ -4833,6 +4854,7 @@
 				772B50C6196DD5EE00050B7E /* glyphicons_037_coins.png in Resources */,
 				772B4B76196DD0A100050B7E /* glyphicons_halflings_027_inbox@2x.png in Resources */,
 				772B5295196DD5EE00050B7E /* glyphicons_268_keyboard_wireless@2x.png in Resources */,
+				77F5014E19A5A6EF0016ACD1 /* Default-Landscape@2x-iPad.png in Resources */,
 				772B4C01196DD0A100050B7E /* glyphicons_halflings_097_plus.png in Resources */,
 				772B5260196DD5EE00050B7E /* glyphicons_242_google_maps.png in Resources */,
 				772B5154196DD5EE00050B7E /* glyphicons_108_left_indent.png in Resources */,
@@ -5493,6 +5515,7 @@
 				772B5225196DD5EE00050B7E /* glyphicons_212_down_arrow@2x.png in Resources */,
 				772B50F9196DD5EE00050B7E /* glyphicons_062_paperclip@2x.png in Resources */,
 				772B528B196DD5EE00050B7E /* glyphicons_263_bank@2x.png in Resources */,
+				77F5015419A5A78C0016ACD1 /* Default-Portrait@2x~iPhoneR4.png in Resources */,
 				772B535D196DD5EE00050B7E /* glyphicons_368_collapse@2x.png in Resources */,
 				772B4BA7196DD0A100050B7E /* glyphicons_halflings_052_align-center.png in Resources */,
 				772B5425196DD5EE00050B7E /* glyphicons_468_server_lock@2x.png in Resources */,
@@ -5509,6 +5532,7 @@
 				772B50F3196DD5EE00050B7E /* glyphicons_059_cargo@2x.png in Resources */,
 				772B514E196DD5EE00050B7E /* glyphicons_105_text_height.png in Resources */,
 				772B535E196DD5EE00050B7E /* glyphicons_369_collapse_top.png in Resources */,
+				77F5014C19A5A68C0016ACD1 /* Default-Portrait@2x~iPad.png in Resources */,
 				772B53D0196DD5EE00050B7E /* glyphicons_426_git_merge.png in Resources */,
 				772B5110196DD5EE00050B7E /* glyphicons_074_cup.png in Resources */,
 				772B53E2196DD5EE00050B7E /* glyphicons_435_undo.png in Resources */,
