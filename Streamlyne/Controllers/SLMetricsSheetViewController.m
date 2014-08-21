@@ -16,7 +16,7 @@
 
 @implementation SLMetricsSheetViewController
 
-@synthesize titleLabel, descriptionLabel, attributeCollection;
+@synthesize descriptionLabel, attributeCollection;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,7 +40,7 @@
     // Display AttributeCollection's meta data
     [RACObserve(attributeCollection, name) subscribeNext:^(NSString *name)
      {
-         self.titleLabel.text = name;
+         self.title = name;
      }];
     [RACObserve(attributeCollection, desc) subscribeNext:^(NSString *description)
      {
