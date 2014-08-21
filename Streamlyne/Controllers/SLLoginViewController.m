@@ -93,8 +93,25 @@
     }).catch(^(NSError *error) {
         
         [hud hide:YES];
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
-                                                           message:error.localizedRecoverySuggestion
+        
+        // Switch out error message for more user friendly message
+        NSLog(@"Desc: %@", error.localizedDescription);
+        NSLog(@"Recov: %@", error.localizedRecoverySuggestion);
+        NSString *errorTitle = @"Login Failure";
+        NSString *errorMessage = @"An unexpected error occurred.";
+        if ([error.localizedDescription isEqualToString:@"Request failed: unauthorized (401)"])
+        {
+            errorTitle = @"Login Failure";
+            errorMessage = @"Your username, password, or organization is incorrect.";
+        }
+        else //if ([error.localizedDescription isEqualToString:@"Request failed: internal server error (500)"])
+        {
+            errorTitle = @"Server Error";
+            errorMessage = @"Please contact dawson@streamlyne.co";
+        }
+        
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:errorTitle
+                                                           message:errorMessage
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
