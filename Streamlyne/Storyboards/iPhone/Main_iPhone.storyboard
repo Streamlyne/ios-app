@@ -26,7 +26,7 @@
                                 <color key="textColor" red="0.94205659639999995" green="0.98907773359999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a72-aC-6Oc">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a72-aC-6Oc">
                                 <rect key="frame" x="26" y="330" width="268" height="56"/>
                                 <color key="backgroundColor" red="0.38823533059999998" green="0.74117648599999997" blue="0.82745105029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -47,14 +47,7 @@
                                     <action selector="loginBtnPressed:" destination="Kbs-CM-put" eventType="touchUpInside" id="b8g-lY-3gQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXV-UN-SBb">
-                                <rect key="frame" x="96" y="508" width="129" height="30"/>
-                                <state key="normal" title="Request Password">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-8F-bpg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-8F-bpg">
                                 <rect key="frame" x="26" y="107" width="268" height="56"/>
                                 <color key="backgroundColor" red="0.1098039299" green="0.2196078598" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -65,7 +58,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-IR-fLg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-IR-fLg">
                                 <rect key="frame" x="26" y="184" width="268" height="56"/>
                                 <color key="backgroundColor" red="0.1098039299" green="0.2196078598" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -75,7 +68,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzE-GD-Fs8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzE-GD-Fs8">
                                 <rect key="frame" x="26" y="258" width="268" height="56"/>
                                 <color key="backgroundColor" red="0.1098039299" green="0.2196078598" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -97,7 +90,6 @@
                         <constraints>
                             <constraint firstItem="vAP-kW-GRI" firstAttribute="top" secondItem="i9w-Cw-Fjd" secondAttribute="bottom" constant="25" id="4KD-Vn-9Jy"/>
                             <constraint firstItem="vAP-kW-GRI" firstAttribute="leading" secondItem="vpv-oa-KEe" secondAttribute="trailing" constant="-13" id="7ba-YR-DOA"/>
-                            <constraint firstItem="iWR-Nr-fSI" firstAttribute="top" secondItem="ZXV-UN-SBb" secondAttribute="bottom" constant="30" id="9Tf-77-iWm"/>
                             <constraint firstItem="vpv-oa-KEe" firstAttribute="leading" secondItem="frc-SE-USI" secondAttribute="leading" constant="58" id="CeG-JJ-acQ"/>
                             <constraint firstItem="a72-aC-6Oc" firstAttribute="centerX" secondItem="bVs-IR-fLg" secondAttribute="centerX" id="Cpa-Gj-bZk"/>
                             <constraint firstItem="c2e-8F-bpg" firstAttribute="trailing" secondItem="bVs-IR-fLg" secondAttribute="trailing" id="EuQ-Ye-IdK"/>
@@ -105,9 +97,7 @@
                             <constraint firstItem="vpv-oa-KEe" firstAttribute="top" secondItem="i9w-Cw-Fjd" secondAttribute="bottom" constant="25" id="Rwf-fY-sub"/>
                             <constraint firstItem="a72-aC-6Oc" firstAttribute="top" secondItem="zzE-GD-Fs8" secondAttribute="bottom" constant="16" id="TP1-Uz-xAP"/>
                             <constraint firstItem="c2e-8F-bpg" firstAttribute="top" secondItem="frc-SE-USI" secondAttribute="top" constant="107" id="dxj-rJ-6Yl"/>
-                            <constraint firstItem="ZXV-UN-SBb" firstAttribute="centerX" secondItem="a72-aC-6Oc" secondAttribute="centerX" constant="0.5" id="glr-CY-pUE"/>
                             <constraint firstItem="zzE-GD-Fs8" firstAttribute="trailing" secondItem="bVs-IR-fLg" secondAttribute="trailing" id="lJK-PI-D74"/>
-                            <constraint firstItem="ZXV-UN-SBb" firstAttribute="centerX" secondItem="frc-SE-USI" secondAttribute="centerX" id="mwv-f5-vhN"/>
                             <constraint firstItem="c2e-8F-bpg" firstAttribute="leading" secondItem="bVs-IR-fLg" secondAttribute="leading" id="pHa-72-1gO"/>
                             <constraint firstItem="zzE-GD-Fs8" firstAttribute="leading" secondItem="bVs-IR-fLg" secondAttribute="leading" id="sIJ-YB-ohH"/>
                             <constraint firstItem="bVs-IR-fLg" firstAttribute="top" secondItem="c2e-8F-bpg" secondAttribute="bottom" constant="21" id="syJ-PX-Tm5"/>
