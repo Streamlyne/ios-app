@@ -9,6 +9,9 @@
 #import "SLActivityMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SLAppDelegate.h"
+#import "SLActivityMenuItemViewCell.h"
+#import "NIKFontAwesomeIconFactory.h"
+#import "NIKFontAwesomeIconFactory+iOS.h"
 
 @interface SLActivityMenuViewController ()
     @property NSArray *activities;
@@ -33,11 +36,15 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
+        NIKFontAwesomeIconFactory *factory = [NIKFontAwesomeIconFactory barButtonItemIconFactory];
+        factory.size = 64.0;
+        
         self.activities = @[
                             @{
                                 @"title":@"Metrics",
                                 @"storyboard": @"Metrics",
-                                @"identifier": @"metricsViewController"
+                                @"identifier": @"metricsViewController",
+                                @"icon": [factory createImageForIcon:NIKFontAwesomeIconFileO]
                                 }
 //                            ,
 //                            @{
@@ -96,16 +103,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    SLActivityMenuItemViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
     cell.backgroundColor = [UIColor clearColor];
-    //
+    // Get Activity Menu Item
     NSDictionary *act = self.activities[indexPath.row];
     NSString *title = act[@"title"];
-    
-    UILabel *titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = title;
+    UIImage *icon = act[@"icon"];
+    // UI
+    cell.titleLabel.text = title;
+    cell.iconImageView.image = icon;
     
     return cell;
 }

@@ -1393,6 +1393,7 @@
 		77D708EB19706D1B00616266 /* Assets_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EA19706D1B00616266 /* Assets_iPad.storyboard */; };
 		77D708ED1970832A00616266 /* Metrics_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D708EC1970832A00616266 /* Metrics_iPad.storyboard */; };
 		77DBA36D1987367100E59003 /* SLAttributeDataInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */; };
+		77F5014519A58F860016ACD1 /* SLActivityMenuItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F5014419A58F860016ACD1 /* SLActivityMenuItemViewCell.m */; };
 		80FDBC1A8ABD4EB59C216B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D6CE134AE0437A89021D6B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -2804,6 +2805,8 @@
 		77D708EC1970832A00616266 /* Metrics_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metrics_iPad.storyboard; sourceTree = "<group>"; };
 		77DBA36B1987367100E59003 /* SLAttributeDataInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttributeDataInputViewCell.h; sourceTree = "<group>"; };
 		77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAttributeDataInputViewCell.m; sourceTree = "<group>"; };
+		77F5014319A58F860016ACD1 /* SLActivityMenuItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLActivityMenuItemViewCell.h; sourceTree = "<group>"; };
+		77F5014419A58F860016ACD1 /* SLActivityMenuItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLActivityMenuItemViewCell.m; sourceTree = "<group>"; };
 		E622A477CFFF4CAC81544F77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -4265,6 +4268,8 @@
 				7778F67B197F68F400803E94 /* SLAttributeCollectionViewCell.m */,
 				77DBA36B1987367100E59003 /* SLAttributeDataInputViewCell.h */,
 				77DBA36C1987367100E59003 /* SLAttributeDataInputViewCell.m */,
+				77F5014319A58F860016ACD1 /* SLActivityMenuItemViewCell.h */,
+				77F5014419A58F860016ACD1 /* SLActivityMenuItemViewCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -5869,6 +5874,7 @@
 				7778F67C197F68F400803E94 /* SLAttributeCollectionViewCell.m in Sources */,
 				77DBA36D1987367100E59003 /* SLAttributeDataInputViewCell.m in Sources */,
 				772B49AA196DC64000050B7E /* SLLoginViewController.m in Sources */,
+				77F5014519A58F860016ACD1 /* SLActivityMenuItemViewCell.m in Sources */,
 				77A50109196D9169000BADC0 /* SLAppDelegate.m in Sources */,
 				773B7B94196DE06000E559DD /* SLActivityMenuViewController.m in Sources */,
 				77754CCF197EC9D7005772F4 /* SLMetricsListViewController.m in Sources */,

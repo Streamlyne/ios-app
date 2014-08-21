@@ -9,3 +9,5 @@ pod 'CocoaLumberjack'
 pod 'PromiseKit'
 pod 'ReactiveCocoa'
 pod 'TestFlightSDK'
+pod 'FontAwesomeIconFactory'
+
