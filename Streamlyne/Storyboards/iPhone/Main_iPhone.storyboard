@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glavin!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pq-up-TwB">
-                                <rect key="frame" x="180" y="254" width="120" height="60"/>
+                                <rect key="frame" x="180" y="248" width="120" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Yfd-mz-yAS"/>
                                 </constraints>
@@ -175,18 +175,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="R8G-MA-M64" firstAttribute="centerX" secondItem="bMm-BZ-dVv" secondAttribute="centerX" id="0kC-cq-OC4"/>
-                            <constraint firstItem="d41-ap-J5r" firstAttribute="top" secondItem="0pq-up-TwB" secondAttribute="top" constant="-12" id="AGE-Ub-VbM"/>
+                            <constraint firstItem="d41-ap-J5r" firstAttribute="top" secondItem="0pq-up-TwB" secondAttribute="top" constant="-6" id="AGE-Ub-VbM"/>
                             <constraint firstItem="uVr-O7-f6H" firstAttribute="top" secondItem="d41-ap-J5r" secondAttribute="bottom" constant="254" id="AWe-ii-5Mx"/>
                             <constraint firstItem="uVr-O7-f6H" firstAttribute="top" secondItem="KMd-sX-6TY" secondAttribute="bottom" constant="20" id="LEM-zm-Eqt"/>
                             <constraint firstItem="d41-ap-J5r" firstAttribute="top" secondItem="R8G-MA-M64" secondAttribute="bottom" constant="19" id="LUr-Fn-hDR"/>
                             <constraint firstItem="R8G-MA-M64" firstAttribute="top" secondItem="aDW-br-PXA" secondAttribute="bottom" constant="93" id="Ofp-sX-nlP"/>
-                            <constraint firstItem="d41-ap-J5r" firstAttribute="baseline" secondItem="0pq-up-TwB" secondAttribute="baseline" constant="1" id="Q2s-in-JuQ"/>
+                            <constraint firstItem="d41-ap-J5r" firstAttribute="baseline" secondItem="0pq-up-TwB" secondAttribute="baseline" constant="7" id="Q2s-in-JuQ"/>
                             <constraint firstItem="0pq-up-TwB" firstAttribute="leading" secondItem="d41-ap-J5r" secondAttribute="trailing" constant="8" id="dae-gb-oIq"/>
                             <constraint firstItem="d41-ap-J5r" firstAttribute="leading" secondItem="bMm-BZ-dVv" secondAttribute="leading" constant="33" id="m7e-U9-ni3"/>
                             <constraint firstItem="KMd-sX-6TY" firstAttribute="leading" secondItem="bMm-BZ-dVv" secondAttribute="leading" constant="51" id="xN7-v4-hEh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="usersNameLabel" destination="0pq-up-TwB" id="5Vo-2N-yb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XX-4i-b3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,6 +15,7 @@
 @end
 
 @implementation SLHomeViewController
+@synthesize usersNameLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +40,13 @@
     }else {
         self.navigationController.navigationBar.tintColor = slBlue;
     }
+    
+    //
+    SLAppDelegate *d = (SLAppDelegate*)[[UIApplication sharedApplication] delegate];
+    SLClient *client = d.client;
+    SLUser *meUser = client.me;
+    usersNameLabel.text = [NSString stringWithFormat:@"%@ %@!", meUser.firstName, meUser.lastName];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SLHomeViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *usersNameLabel;
 @end
