@@ -88,7 +88,7 @@ attribute = _attribute;
     // Show progress spinner
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.superview animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Loading";
+    hud.labelText = @"Sending";
     
     // Get the value
     NSString *valStr = dataInputTextField.text;
@@ -98,14 +98,13 @@ attribute = _attribute;
     if (val == [NSDecimalNumber notANumber])
     {
         [hud hide:YES];
-        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Invalid Input"
                                                            message:@"Input must be a number."
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
         [theAlert show];
-        
+        textField.text = @""; // Clear input field
         return NO;
     }
     [textField resignFirstResponder];
@@ -131,13 +130,13 @@ attribute = _attribute;
     .catch(^(NSError *error){
         NSLog(@"%@", error);
         [hud hide:YES];
-        
         UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
                                                            message:error.localizedRecoverySuggestion
                                                           delegate:self
                                                  cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
         [theAlert show];
+        textField.text = @""; // Clear input field
 
     });
     return YES;

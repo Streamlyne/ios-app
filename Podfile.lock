@@ -42,7 +42,7 @@ PODS:
   - OMGHTTPURLRQ/UserAgent (1.1.5):
     - OMGHTTPURLRQ/UserAgent
   - PKRevealController (2.0.6)
-  - PromiseKit (0.9.16):
+  - PromiseKit (0.9.16.1):
     - PromiseKit/NSNotificationCenter
     - PromiseKit/NSURLConnection
     - PromiseKit/Pause
@@ -52,26 +52,26 @@ PODS:
     - PromiseKit/UIViewController
     - PromiseKit/Until
     - PromiseKit/When
-  - PromiseKit/NSNotificationCenter (0.9.16):
+  - PromiseKit/NSNotificationCenter (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (0.9.16):
+  - PromiseKit/NSURLConnection (0.9.16.1):
     - OMGHTTPURLRQ
     - PromiseKit/Promise
-  - PromiseKit/Pause (0.9.16):
+  - PromiseKit/Pause (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/Promise (0.9.16)
-  - PromiseKit/UIActionSheet (0.9.16):
+  - PromiseKit/Promise (0.9.16.1)
+  - PromiseKit/UIActionSheet (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/UIAlertView (0.9.16):
+  - PromiseKit/UIAlertView (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/UIView (0.9.16):
+  - PromiseKit/UIView (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/UIViewController (0.9.16):
+  - PromiseKit/UIViewController (0.9.16.1):
     - PromiseKit/Promise
-  - PromiseKit/Until (0.9.16):
+  - PromiseKit/Until (0.9.16.1):
     - PromiseKit/Promise
     - PromiseKit/When
-  - PromiseKit/When (0.9.16):
+  - PromiseKit/When (0.9.16.1):
     - PromiseKit/Promise
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
@@ -106,7 +106,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   OMGHTTPURLRQ: c8dd3f83341702f0a3cae94e09d7e368d79a8b6e
   PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
-  PromiseKit: 824f03652bdfc44239eca06277dbd9385759954c
+  PromiseKit: ddf307280915ba6551014eb8c341b4074e366cef
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Streamlyne-Cocoa-SDK: c279e2535ee4e98a31b58a6ff31042c8bd495a5a
   TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
