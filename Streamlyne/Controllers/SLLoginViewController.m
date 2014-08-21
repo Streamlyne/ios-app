@@ -10,6 +10,7 @@
 #import "SLAppDelegate.h"
 #import "StreamlyneSDK.h"
 #import "MBProgressHUD.h"
+#import "UITextField+PlaceholderColor.h"
 
 @interface SLLoginViewController ()
 - (IBAction)loginBtnPressed:(UIButton *)sender;
@@ -35,6 +36,13 @@
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.organizationTextField.delegate = self;
+    
+    // Change placeholder text color
+    UIColor *placeholderColor = [UIColor grayColor];
+    [self.emailTextField setPlaceholderColor:placeholderColor];
+    [self.passwordTextField setPlaceholderColor:placeholderColor];
+    [self.organizationTextField setPlaceholderColor:placeholderColor];
+    
 }
 
 - (void)didReceiveMemoryWarning
