@@ -53,11 +53,14 @@ attribute = _attribute;
     NSLog(@"Set Attribute: %@", attribute);
     
     // Bind to new attribute
-    [RACObserve(self.attribute, desc) subscribeNext:^(NSString *description)
-     {
-         NSLog(@"Description: %@", description);
-         self.attributeDescriptionLabel.text = description;
-     }];
+    if (self.attributeDescriptionLabel != nil)
+    {
+        [RACObserve(self.attribute, desc) subscribeNext:^(NSString *description)
+         {
+             NSLog(@"Description: %@", description);
+             self.attributeDescriptionLabel.text = description;
+         }];
+    }
     [RACObserve(self.attribute, name) subscribeNext:^(NSString *name)
      {
          NSLog(@"Name: %@", name);
@@ -73,11 +76,14 @@ attribute = _attribute;
              self.assetNameLabel.text = assetName;
          }];
         
-        [RACObserve(asset, desc) subscribeNext:^(NSString *description)
-         {
-             NSLog(@"description: %@", description);
-             self.assetDescriptionLabel.text = description;
-         }];
+        if (self.assetDescriptionLabel != nil)
+        {
+            [RACObserve(asset, desc) subscribeNext:^(NSString *description)
+             {
+                 NSLog(@"description: %@", description);
+                 self.assetDescriptionLabel.text = description;
+             }];
+        }
     });
     
 }
