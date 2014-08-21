@@ -281,7 +281,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="u3r-6m-utq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="u3r-6m-utq" customClass="SLActivityMenuItemViewCell">
                                 <rect key="frame" x="0.0" y="158" width="276" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3r-6m-utq" id="8u7-3S-P2j">
@@ -314,6 +314,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="iconImageView" destination="unY-Uq-q07" id="7ay-rj-eD8"/>
+                                    <outlet property="titleLabel" destination="2pM-Q3-sQn" id="RlU-w4-4Ui"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
