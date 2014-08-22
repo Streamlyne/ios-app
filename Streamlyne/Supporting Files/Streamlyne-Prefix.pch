@@ -16,16 +16,19 @@
     #import <CoreData/CoreData.h>
 
     // Lumberjack Logger
+
     #import <CocoaLumberjack/CocoaLumberjack.h>
+    #ifdef DEBUG
+    //static int ddLogLevel = LOG_LEVEL_VERBOSE;
+    #else
+    //static int ddLogLevel = LOG_LEVEL_ERROR;
+    #endif
+    static int ddLogLevel = LOG_LEVEL_ERROR;
 
-#endif
-
-
-#ifdef DEBUG
-static int ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-static int ddLogLevel = LOG_LEVEL_ERROR;
 #endif
 
 #import <Streamlyne-Cocoa-SDK/StreamlyneSDK.h>
 #import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>
+
+// Disable NSLog
+#define NSLog(...);

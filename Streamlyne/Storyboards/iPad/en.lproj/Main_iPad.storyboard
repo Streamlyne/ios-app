@@ -26,7 +26,7 @@
                                 <color key="textColor" red="0.94205659643644557" green="0.98907773363968832" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvF-BP-dBU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvF-BP-dBU">
                                 <rect key="frame" x="265" y="754" width="238" height="66"/>
                                 <color key="backgroundColor" red="0.38823533058166504" green="0.74117648601531982" blue="0.82745105028152466" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -47,7 +47,7 @@
                                     <action selector="loginBtnPressed:" destination="JR7-An-Jel" eventType="touchUpInside" id="Xkg-0o-shn"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcL-9i-d85">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todd@streamlyne.co" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcL-9i-d85">
                                 <rect key="frame" x="159" y="489" width="451" height="69"/>
                                 <color key="backgroundColor" red="0.1098039299249649" green="0.21960785984992981" blue="0.24313727021217346" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -58,7 +58,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-aX-RSr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="streamlyne" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-aX-RSr">
                                 <rect key="frame" x="159" y="583" width="451" height="69"/>
                                 <color key="backgroundColor" red="0.1098039299" green="0.2196078598" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -68,7 +68,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGv-0w-M5f">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nevis" placeholder="Organization" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGv-0w-M5f">
                                 <rect key="frame" x="159" y="668" width="451" height="69"/>
                                 <color key="backgroundColor" red="0.1098039299" green="0.2196078598" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -92,6 +92,7 @@
                             <constraint firstItem="pGv-0w-M5f" firstAttribute="leading" secondItem="EKL-aX-RSr" secondAttribute="leading" id="3S4-YR-GUW"/>
                             <constraint firstItem="AcL-9i-d85" firstAttribute="leading" secondItem="EKL-aX-RSr" secondAttribute="leading" id="8zy-TN-Imc"/>
                             <constraint firstItem="pGv-0w-M5f" firstAttribute="trailing" secondItem="EKL-aX-RSr" secondAttribute="trailing" id="FtD-EN-TMt"/>
+                            <constraint firstItem="EKL-aX-RSr" firstAttribute="centerX" secondItem="AN6-HC-XFm" secondAttribute="centerX" id="N5r-mW-fwI"/>
                             <constraint firstItem="2a9-im-Juc" firstAttribute="leading" secondItem="lZ1-cy-6BG" secondAttribute="trailing" constant="8" id="Yz3-C5-i8d"/>
                             <constraint firstItem="2a9-im-Juc" firstAttribute="top" secondItem="Pbe-mH-bBd" secondAttribute="bottom" constant="234" id="ZPS-h7-Y2x"/>
                             <constraint firstItem="lZ1-cy-6BG" firstAttribute="top" secondItem="Pbe-mH-bBd" secondAttribute="bottom" constant="238" id="eXw-Oi-OnY"/>

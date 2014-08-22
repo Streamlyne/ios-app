@@ -64,18 +64,28 @@
 
 - (void) handleRefresh:(UIRefreshControl *)refreshControl
 {
-    // Request
-    [self.refreshControl beginRefreshing];
-    [self.attributeCollection reloadRecord]
-    //[SLAttributeCollection findById:attributeCollection.nid]
-    .then(^(SLAttributeCollection *record) {
-        NSLog(@"attributeCollection: %@", record);
-        self.attributeCollection = record;
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-    })
-    .catch(^(NSError *error) {
-        DDLogInfo(@"Error: %@", error);
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        
+        // Request
+        [self.refreshControl beginRefreshing];
+        [self.attributeCollection reloadRecord]
+        //[SLAttributeCollection findById:attributeCollection.nid]
+        .then(^(SLAttributeCollection *record) {
+            NSLog(@"attributeCollection: %@", record);
+            self.attributeCollection = record;
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        })
+        .catch(^(NSError *error) {
+            DDLogInfo(@"Error: %@", error);
+        });
+
+        
+        //Background Thread
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            //Run UI Updates
+        });
+        
     });
 }
 

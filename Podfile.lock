@@ -92,7 +92,7 @@ DEPENDENCIES:
   - FontAwesomeIconFactory
   - MBProgressHUD (~> 0.8)
   - PKRevealController
-  - PromiseKit
+  - PromiseKit (<= 0.9.14)
   - ReactiveCocoa
   - Streamlyne-Cocoa-SDK (from `git@github.com:Streamlyne/Cocoa-SDK.git`)
   - TestFlightSDK

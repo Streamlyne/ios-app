@@ -52,6 +52,19 @@ attribute = _attribute;
     _attribute = attribute;
     NSLog(@"Set Attribute: %@", attribute);
     
+    // Reset UI
+    self.assetNameLabel.text = @"Loading Asset Name...";
+    if (self.assetDescriptionLabel != nil)
+    {
+        self.assetDescriptionLabel.text = @"Loading Asset Description...";
+    }
+    self.attributeNameLabel.text = @"Loading Attribute Name...";
+    if (self.attributeDescriptionLabel != nil)
+    {
+        self.attributeDescriptionLabel.text = @"Loading Attribute Description...";
+    }
+    
+    
     // Bind to new attribute
     if (self.attributeDescriptionLabel != nil)
     {
@@ -61,6 +74,12 @@ attribute = _attribute;
              self.attributeDescriptionLabel.text = description;
          }];
     }
+    [RACObserve(self.attribute, humanName) subscribeNext:^(NSString *humanName)
+     {
+         NSLog(@"Attribute humanName: %@", humanName);
+//         self.attributeNameLabel.text = humanName;
+     }];
+
     [RACObserve(self.attribute, name) subscribeNext:^(NSString *name)
      {
          NSLog(@"Name: %@", name);
@@ -69,11 +88,17 @@ attribute = _attribute;
     
     attribute.asset.then(^(SLAsset *asset) {
         DDLogInfo(@"Attribute's Asset: %@", asset);
-        
-        [RACObserve(asset, humanName) subscribeNext:^(NSString *assetName)
+
+        [RACObserve(asset, name) subscribeNext:^(NSString *assetName)
          {
              NSLog(@"assetName: %@", assetName);
              self.assetNameLabel.text = assetName;
+         }];
+
+        [RACObserve(asset, humanName) subscribeNext:^(NSString *assetHumanName)
+         {
+             NSLog(@"assetHumanName: %@", assetHumanName);
+//             self.assetNameLabel.text = assetHumanName;
          }];
         
         if (self.assetDescriptionLabel != nil)
@@ -84,6 +109,15 @@ attribute = _attribute;
                  self.assetDescriptionLabel.text = description;
              }];
         }
+    });
+
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        //Background Thread
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            //Run UI Updates
+        });
     });
     
 }
