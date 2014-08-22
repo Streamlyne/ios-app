@@ -16,7 +16,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>localhost:5000</string>
+			<string>54.183.15.175:5000</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
