@@ -34,16 +34,16 @@ PODS:
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
   - MBProgressHUD (0.9)
-  - OMGHTTPURLRQ (1.1.5):
+  - OMGHTTPURLRQ (1.1.6):
     - OMGHTTPURLRQ/RQ
     - OMGHTTPURLRQ/UserAgent
     - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/RQ (1.1.5):
+  - OMGHTTPURLRQ/RQ (1.1.6):
     - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/UserAgent (1.1.5):
+  - OMGHTTPURLRQ/UserAgent (1.1.6):
     - OMGHTTPURLRQ/UserAgent
   - PKRevealController (2.0.6)
-  - PromiseKit (0.9.16.1):
+  - PromiseKit (0.9.16.2):
     - PromiseKit/NSNotificationCenter
     - PromiseKit/NSURLConnection
     - PromiseKit/Pause
@@ -53,26 +53,26 @@ PODS:
     - PromiseKit/UIViewController
     - PromiseKit/Until
     - PromiseKit/When
-  - PromiseKit/NSNotificationCenter (0.9.16.1):
+  - PromiseKit/NSNotificationCenter (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (0.9.16.1):
+  - PromiseKit/NSURLConnection (0.9.16.2):
     - OMGHTTPURLRQ
     - PromiseKit/Promise
-  - PromiseKit/Pause (0.9.16.1):
+  - PromiseKit/Pause (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/Promise (0.9.16.1)
-  - PromiseKit/UIActionSheet (0.9.16.1):
+  - PromiseKit/Promise (0.9.16.2)
+  - PromiseKit/UIActionSheet (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/UIAlertView (0.9.16.1):
+  - PromiseKit/UIAlertView (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/UIView (0.9.16.1):
+  - PromiseKit/UIView (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/UIViewController (0.9.16.1):
+  - PromiseKit/UIViewController (0.9.16.2):
     - PromiseKit/Promise
-  - PromiseKit/Until (0.9.16.1):
+  - PromiseKit/Until (0.9.16.2):
     - PromiseKit/Promise
     - PromiseKit/When
-  - PromiseKit/When (0.9.16.1):
+  - PromiseKit/When (0.9.16.2):
     - PromiseKit/Promise
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
@@ -107,9 +107,9 @@ SPEC CHECKSUMS:
   FontAwesomeIconFactory: a60171039c8067b7fd04d0300f0a7f8fc5cffbae
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  OMGHTTPURLRQ: c8dd3f83341702f0a3cae94e09d7e368d79a8b6e
+  OMGHTTPURLRQ: 6fd7b1dcaed31734959699e42ea920eea380d1e7
   PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
-  PromiseKit: ddf307280915ba6551014eb8c341b4074e366cef
+  PromiseKit: 80f517f709805edf8f967291380cd009456cd12f
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Streamlyne-Cocoa-SDK: c279e2535ee4e98a31b58a6ff31042c8bd495a5a
   TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
