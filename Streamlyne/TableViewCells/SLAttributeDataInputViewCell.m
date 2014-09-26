@@ -150,35 +150,41 @@ attribute = _attribute;
     [textField resignFirstResponder];
     
     // Create
-    SLAttributeDatum *attributeDatum = [SLAttributeDatum createRecord:@{
+    DDLogInfo(@"_Attribute: %@", _attribute);
+    PMKPromise *promise = [SLAttributeDatum createRecord:@{
                                                                         @"value": val
                                                                         }];
-    // Associate the Attribute to the AttributeDatum
-    attributeDatum.attribute = _attribute;
-    // Set the initial meta data dates
-    attributeDatum.dateCreated = [NSDate new];
-    attributeDatum.dateUpdated = [NSDate new];
-    DDLogInfo(@"Attribute: %@", _attribute);
-    DDLogInfo(@"AttributeDatum: %@", attributeDatum);
-    // Save
-    [attributeDatum save]
-    .then(^(SLAttributeDatum *attributeDatum) {
-        NSLog(@"Datum: %@", attributeDatum);
-        textField.text = @""; // Clear input field
-        [hud hide:YES];
-    })
-    .catch(^(NSError *error){
-        NSLog(@"%@", error);
-        [hud hide:YES];
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
-                                                           message:error.localizedRecoverySuggestion
-                                                          delegate:self
-                                                 cancelButtonTitle:@"OK"
-                                                 otherButtonTitles:nil];
-        [theAlert show];
-        textField.text = @""; // Clear input field
+    
+    promise.then(^(SLAttributeDatum *attributeDatum) {
+        
+        // Associate the Attribute to the AttributeDatum
+        attributeDatum.attribute = _attribute;
+        // Set the initial meta data dates
+        attributeDatum.dateCreated = [NSDate new];
+        attributeDatum.dateUpdated = [NSDate new];
+        DDLogInfo(@"Attribute: %@", _attribute);
+        DDLogInfo(@"AttributeDatum: %@", attributeDatum);
+        // Save
+        [attributeDatum save]
+        .then(^(SLAttributeDatum *attributeDatum) {
+            NSLog(@"Datum: %@", attributeDatum);
+            textField.text = @""; // Clear input field
+            [hud hide:YES];
+        })
+        .catch(^(NSError *error){
+            NSLog(@"%@", error);
+            [hud hide:YES];
+            UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                               message:error.localizedRecoverySuggestion
+                                                              delegate:self
+                                                     cancelButtonTitle:@"OK"
+                                                     otherButtonTitles:nil];
+            [theAlert show];
+            textField.text = @""; // Clear input field
 
+        });
     });
+    
     return YES;
 }
 
